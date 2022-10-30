@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Об'єкти</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/other.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Головна</a></li>
+            <li class="breadcrumb-item">Об'єкти</li>
+        </ol>
+    </div>
+
+    <div class="index-header about-category__header-slider">
+        <div class="container">
+            <div class="swiper slider-index__header">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/index/header-photo_desc-1.webp" type="image/webp"
+                                    media="(min-device-width: 768px)">
+                            <source srcset="img/index/header-photo_desc-1.jpg" type="image/jpeg"
+                                    media="(min-device-width: 768px)">
+
+                            <source srcset="img/index/header-photo_mob-1.webp" type="image/webp">
+                            <source srcset="img/index/header-photo_mob-1.jpg" type="image/jpeg">
+                            <img src="img/index/header-photo_mob-1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/index/header-photo_desc-1.webp" type="image/webp"
+                                    media="(min-device-width: 768px)">
+                            <source srcset="img/index/header-photo_desc-1.jpg" type="image/jpeg"
+                                    media="(min-device-width: 768px)">
+
+                            <source srcset="img/index/header-photo_mob-1.webp" type="image/webp">
+                            <source srcset="img/index/header-photo_mob-1.jpg" type="image/jpeg">
+                            <img src="img/index/header-photo_mob-1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/index/header-photo_desc-1.webp" type="image/webp"
+                                    media="(min-device-width: 768px)">
+                            <source srcset="img/index/header-photo_desc-1.jpg" type="image/jpeg"
+                                    media="(min-device-width: 768px)">
+
+                            <source srcset="img/index/header-photo_mob-1.webp" type="image/webp">
+                            <source srcset="img/index/header-photo_mob-1.jpg" type="image/jpeg">
+                            <img src="img/index/header-photo_mob-1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="slider-arrow arrow-left"></div>
+                <div class="slider-arrow arrow-right"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="objects-infographics">
+            <div class="other-slogan">
+                <h2 class="h2 slogan__title">Історія підприємства</h2>
+                <p class="slogan__description">
+                    Гнучка система знижок безпосередньо залежить від <br>
+                    обсягу закупівлі і робить співпрацю для клієнта ще <br>
+                    більш вигідною. Для постійних клієнтів АГРОМАТ <br>
+                    передбачена система відстрочки платежу.
+                </p>
+            </div>
+
+            <div class="infographics-block">
+                <div class="item">
+                    <p class="item-title">> 5 млн</p>
+                    <p class="item-desc">
+                        м<sup>2</sup> керамічної плитки і керамограніту
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="item-title">> 30 тис</p>
+                    <p class="item-desc">
+                        змішувачів
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="item-title">> 20 тис</p>
+                    <p class="item-desc">
+                        Інсталяцій
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="item-title">> 16 тис</p>
+                    <p class="item-desc">
+                        Раковин
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-slogan">
+            <h2 class="h2 slogan__title">Зв'яжіться з нами</h2>
+            <p class="slogan__description">
+                Ми зібрали разом людей, які знають свою справу, справжніх <br>
+                професіоналів. Наш досвід та постійне підвищення кваліфікації дозволяють <br>
+                рекомендувати клієнтам сучасні технічні та дизайнерські рішення.
+            </p>
+        </div>
+
+        <form class="other-filter" method="post">
+            <div class="select" id="factories-select-area">
+
+                <div class="select__toggle">
+                    <label>Район</label>
+                    <button type="button" name="sorting" value="0" data-type="button" data-select="toggle" data-index="-1"></button>
+                </div>
+
+                <div class="select__dropdown">
+                    <ul class="select__options">
+                        <li class="select__option" data-select="option" data-value="0" data-index="0">Всі</li>
+                        <li class="select__option" data-select="option" data-value="1" data-index="1">Україна</li>
+                        <li class="select__option" data-select="option" data-value="2" data-index="2">Іспанія</li>
+                        <li class="select__option" data-select="option" data-value="3" data-index="3">Німеччина</li>
+                        <li class="select__option" data-select="option" data-value="4" data-index="4">Нідерланли</li>
+                        <li class="select__option" data-select="option" data-value="5" data-index="5">Польща</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="select" id="factories-select-region">
+
+                <div class="select__toggle">
+                    <label>Область</label>
+                    <button type="button" name="sorting" value="0" data-type="button" data-select="toggle" data-index="-1"></button>
+                </div>
+
+                <div class="select__dropdown">
+                    <ul class="select__options">
+                        <li class="select__option" data-select="option" data-value="0" data-index="0">Всі</li>
+                        <li class="select__option" data-select="option" data-value="1" data-index="1">IDO</li>
+                        <li class="select__option" data-select="option" data-value="2" data-index="2">Axor</li>
+                        <li class="select__option" data-select="option" data-value="3" data-index="3">Geberit</li>
+                        <li class="select__option" data-select="option" data-value="4" data-index="4">Cersanit</li>
+                        <li class="select__option" data-select="option" data-value="5" data-index="5">Hansgrohe</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-submit">знайти</button>
+        </form>
+
+        <div class="workers">
+            <div class="workers-content">
+                <div class="item">
+                    <div class="left">
+                        <div class="worker-img">
+                            <picture>
+                                <source srcset="img/other/worker.webp" type="image/webp">
+                                <img src="img/other/worker.jpg" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                        <div class="worker-position">
+                            Маріанна Якубовська
+                            <span>Територіальний менеджер</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="worker-phone">
+                            <span>+380 (67) 111-11-11</span>
+                            <span>+380 (67) 111-11-11</span>
+                        </div>
+                        <div class="worker-mail">
+                            <span>ivamagromat@gmail.com</span>
+                            <span>ivamagromat@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="left">
+                        <div class="worker-img">
+                            <picture>
+                                <source srcset="img/other/worker.webp" type="image/webp">
+                                <img src="img/other/worker.jpg" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                        <div class="worker-position">
+                            Маріанна Якубовська
+                            <span>Територіальний менеджер</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="worker-phone">
+                            <span>+380 (67) 111-11-11</span>
+                        </div>
+                        <div class="worker-mail">
+                            <span>ivamagromat@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="left">
+                        <div class="worker-img">
+                            <picture>
+                                <source srcset="img/other/worker.webp" type="image/webp">
+                                <img src="img/other/worker.jpg" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                        <div class="worker-position">
+                            Маріанна Якубовська
+                            <span>Територіальний менеджер</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="worker-phone">
+                            <span>+380 (67) 111-11-11</span>
+                        </div>
+                        <div class="worker-mail">
+                            <span>ivamagromat@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="left">
+                        <div class="worker-img">
+                            <picture>
+                                <source srcset="img/other/worker.webp" type="image/webp">
+                                <img src="img/other/worker.jpg" loading="lazy" alt="">
+                            </picture>
+                        </div>
+                        <div class="worker-position">
+                            Маріанна Якубовська
+                            <span>Територіальний менеджер</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="worker-phone">
+                            <span>+380 (67) 111-11-11</span>
+                        </div>
+                        <div class="worker-mail">
+                            <span>ivamagromat@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination _mb">
+                <div class="btn-more">
+                    <span>Завантажити більше</span>
+                </div>
+                <div class="pagin-content">
+                    <a class="pagin-elem pagin-arrow _prev" href="">Назад</a>
+
+                    <a href="" class="pagin-elem pagin-page current">1</a>
+                    <a href="" class="pagin-elem pagin-page">2</a>
+                    <p class="pagin-elem pagin-dots">...</p>
+                    <a href="" class="pagin-elem pagin-page">7</a>
+                    <a href="" class="pagin-elem pagin-page">8</a>
+
+                    <a class="pagin-elem pagin-arrow _next" href="">Вперед</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="seo-text _mb js-parent">
+            <h1 class="title">СEO текст</h1>
+            <p>
+                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині,
+                яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому,
+                що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад,
+                "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм
+                верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном
+                "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.
+                Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно
+                (зокрема, жартівливі)
+                <span class="_hide-content js-hidden__content">
+                  Тут іде текст." Це робить текст схожим на оповідний. Багато програм
+                  верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном
+                  "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.
+                  Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно (зокрема, жартівливі)
+                </span>
+            <div class="btn-seo js-hidden-btn" data-hide="Показати менше">Показати більше</div>
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+@@include('_footer.html')
+
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/other.js"></script>
+</body>
+</html>

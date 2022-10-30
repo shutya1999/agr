@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Корзина</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <div class="cart">
+            <div class="title">Кошик</div>
+            <div class="cart-wrapper">
+                <div class="cart-content">
+                    <div class="cart-content__top">
+                        <p class="cart-top__title">У кошику</p>
+                        <div class="btn-icon btn-clear">Видалити все</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                                <div class="goods-label discount">
+                                    <span>Акція</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                    <div class="btn-delete"></div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <div class="cart-calc">
+                                <div class="counter js-counter">
+                                    <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                                    <input type="text" value="1" onchange="counterOnChange(this)">
+                                    <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                                </div>
+                                <div class="measurement js-measurement">
+                                    <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                                    <ul class="measurement-list">
+                                        <li data-measurement="1">шт</li>
+                                        <li data-measurement="2">пал</li>
+                                        <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                                    </ul>
+                                </div>
+                                <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                            </div>
+                            <div class="cart-bottom">
+                                <p class="total-text">Вартість: </p>
+                                <p class="total-number"><span>3 000.00 </span>грн</p>
+                                <div class="btn-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                                <div class="goods-label discount">
+                                    <span>Акція</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                    <div class="btn-delete"></div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <div class="cart-calc">
+                                <div class="counter js-counter">
+                                    <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                                    <input type="text" value="1" onchange="counterOnChange(this)">
+                                    <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                                </div>
+                                <div class="measurement js-measurement">
+                                    <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                                    <ul class="measurement-list">
+                                        <li data-measurement="1">шт</li>
+                                        <li data-measurement="2">пал</li>
+                                        <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                                    </ul>
+                                </div>
+                                <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                            </div>
+                            <div class="cart-bottom">
+                                <p class="total-text">Вартість: </p>
+                                <p class="total-number"><span>3 000.00 </span>грн</p>
+                                <div class="btn-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                                <div class="goods-label discount">
+                                    <span>Акція</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                    <div class="btn-delete"></div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <div class="cart-calc">
+                                <div class="counter js-counter">
+                                    <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                                    <input type="text" value="1" onchange="counterOnChange(this)">
+                                    <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                                </div>
+                                <div class="measurement js-measurement">
+                                    <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                                    <ul class="measurement-list">
+                                        <li data-measurement="1">шт</li>
+                                        <li data-measurement="2">пал</li>
+                                        <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                                    </ul>
+                                </div>
+                                <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                            </div>
+                            <div class="cart-bottom">
+                                <p class="total-text">Вартість: </p>
+                                <p class="total-number"><span>3 000.00 </span>грн</p>
+                                <div class="btn-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                                <div class="goods-label discount">
+                                    <span>Акція</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                    <div class="btn-delete"></div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <div class="cart-calc">
+                                <div class="counter js-counter">
+                                    <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                                    <input type="text" value="1" onchange="counterOnChange(this)">
+                                    <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                                </div>
+                                <div class="measurement js-measurement">
+                                    <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                                    <ul class="measurement-list">
+                                        <li data-measurement="1">шт</li>
+                                        <li data-measurement="2">пал</li>
+                                        <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                                    </ul>
+                                </div>
+                                <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                            </div>
+                            <div class="cart-bottom">
+                                <p class="total-text">Вартість: </p>
+                                <p class="total-number"><span>3 000.00 </span>грн</p>
+                                <div class="btn-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-res">
+                    <div class="top">
+                        <p>Загальна сумма замовлення:</p>
+                    </div>
+                    <div class="cost">
+                        <div class="cost-item">
+                            <p class="l">Варітсть замовлення:</p>
+                            <p class="r">
+                                <span>6 000.00 </span>грн
+                            </p>
+                        </div>
+                        <div class="cost-item">
+                            <p class="l">Знижка:</p>
+                            <p class="r">
+                                <span>1 000.00 </span>грн
+                            </p>
+                        </div>
+                        <div class="cost-item _total">
+                            <p class="l">До сплати:</p>
+                            <p class="r">
+                                <span>5 000.00 </span>грн
+                            </p>
+                        </div>
+                        <div class="btns">
+                            <a href="" class="btn-default">оформити замовлення</a>
+                            <a href="" class="btn-border">продовжити покупки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('_goods-slider.html', {
+        "section_name": "Купують разом"
+        })
+    </div>
+
+
+
+</div>
+
+@@include('_footer.html')
+
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZsXvHFZ-H396fuAsVBe2ZixVOhNBUxvA&region=UK&language=uk"
+        defer></script>
+
+<script src="js/custom-select.js"></script>
+
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>

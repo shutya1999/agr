@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cersanit</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/other.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Головна</a></li>
+            <li class="breadcrumb-item"><a href="">Фабрики</a></li>
+            <li class="breadcrumb-item">Фабрики</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="factory-page__top">
+            <div class="left">
+                <h2 class="title">Cersanit</h2>
+                <p class="description">
+                    Компанія Cersanit є великий польським і, одним з найбільших виробників сантехніки та керамічної плитки в Європі. Cersanit –
+                    це традиція і професіоналізм, майстерність і турбота про високий рівень якості продукції, це використання сучасних технологій
+                    і матеріалів, турбота про гігієну і комфорт.
+                    Вироби Cersanit мають всі необхідні знаки якості: гігієнічні атестати Польського Інституту Гігієни, знаки безпеки B,
+                    а також сертифікати відповідності нормам країн, в яких вони продаються. Cersanit, як лідер в галузі виробництва керамічної
+                    сантехніки, отримав відомий в кількох десятках країн сертифікат на інтегровану систему управління якістю.
+                    Сучасні технології виготовлення, багатство форм, легкий монтаж, вишукані моделі, конкурентоспроможні ціни –
+                    ось відмінні риси продукції Cersanit.
+                </p>
+                <a href="" class="link">Сайт</a>
+                <a href="" class="btn-default">до каталогу</a>
+            </div>
+            <div class="right">
+                <picture>
+                    <source srcset="img/other/factory-page.webp" type="image/webp">
+                    <img src="img/other/factory-page.jpg" loading="lazy" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    @@include('_goods-slider.html', {
+    "section_name": "Сантехніка Cersanit"
+    })
+
+    @@include('_goods-slider.html', {
+    "section_name": "Плитка Cersanit "
+    })
+
+    @@include('_goods-slider.html', {
+    "section_name": "Мозаїка Cersanit"
+    })
+
+
+    <div class="container">
+        <div class="seo-text _mb js-parent">
+            <h1 class="title">СEO текст</h1>
+            <p>
+                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині,
+                яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому,
+                що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад,
+                "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм
+                верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном
+                "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.
+                Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно
+                (зокрема, жартівливі)
+                <span class="_hide-content js-hidden__content">
+                  Тут іде текст." Це робить текст схожим на оповідний. Багато програм
+                  верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном
+                  "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.
+                  Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно (зокрема, жартівливі)
+                </span>
+            <div class="btn-seo js-hidden-btn" data-hide="Показати менше">Показати більше</div>
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+@@include('_footer.html')
+
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/other.js"></script>
+</body>
+</html>

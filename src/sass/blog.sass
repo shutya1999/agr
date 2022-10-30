@@ -1,0 +1,609 @@
+$black: #303437
+$dark-blue: #004B91
+$light-blue: #2362CB
+$red: #EB2915
+
+@mixin bg-center
+  background-position: center
+  background-repeat: no-repeat
+  @content
+
+
+
+.cart-blog
+  position: relative
+  & a
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+    position: relative
+    border-radius: 0 0 2px 2px
+    display: block
+    height: 100%
+  & .blog-tags
+    position: absolute
+    top: 20px
+    left: 20px
+  & .img
+    position: relative
+    width: 100%
+    padding-bottom: 60%
+    & picture
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+      height: 100%
+    & img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 2px 2px 0 0
+  & .info
+    padding: 20px 20px 25px 20px
+    & .name
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      color: $black
+      margin-bottom: 20px
+      display: block
+    & .bottom
+      display: flex
+      justify-content: space-between
+      & .date
+        color: $black
+        font-weight: 400
+        font-size: 16px
+        line-height: 110%
+
+.blog-tags
+  display: flex
+  z-index: 1
+  width: 100%
+  flex-wrap: wrap
+  & .blog-tag
+    margin: 0 10px 10px 0
+.stat
+  display: flex
+  & .viewed, & .comments, & .shared
+    position: relative
+    padding-left: 28px
+    color: $black
+    font-weight: 400
+    font-size: 16px
+    line-height: 25px
+    letter-spacing: 0.1px
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 24px
+      height: 24px
+      @include bg-center
+        background-size: contain
+  & .viewed
+    margin-right: 30px
+    &:before
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z' fill='%23888787'/%3E%3C/svg%3E")
+  & .comments
+    &:before
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z' fill='%23888787'/%3E%3C/svg%3E")
+  & .shared
+    margin-right: 30px
+    &:before
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.35C15.11 18.56 15.08 18.78 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z' fill='%23888787'/%3E%3C/svg%3E")
+
+  &._white
+    & .viewed, & .comments
+      color: white
+    & .viewed
+      &:before
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z' fill='white'/%3E%3C/svg%3E")
+    & .comments
+      &:before
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z' fill='white'/%3E%3C/svg%3E")
+
+.blog-catalog-top
+  margin-bottom: 50px
+  & .title
+    margin-bottom: 10px
+  & .desc
+    margin-bottom: 30px
+
+  & .popular
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    & .item
+      min-width: 100%
+    & a
+      height: 100%
+      display: flex
+      flex-direction: column
+    & .img
+      position: relative
+      width: 100%
+      padding-bottom: 55.2%
+      flex: 0
+      & img
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+        border-radius: 2px 2px 0 0
+    & p
+      flex: 1
+      text-align: center
+      min-height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-weight: 500
+      font-size: 17px
+      line-height: 18px
+
+.last-news
+  margin-bottom: 50px
+.last-news__slider
+  & a
+    position: static
+  & .swiper-wrapper
+    flex-direction: column
+  & .swiper-slide
+    position: relative
+    padding-bottom: 103%
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+    & .img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    & .info
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      background: linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,.74) 74.9%)
+      backdrop-filter: blur(3px)
+      border-radius: 0 0 2px 2px
+      & .name
+        font-size: 28px
+        line-height: 120%
+        color: white
+        display: block
+        transition: all .4s
+        &:hover
+          color: $light-blue
+      & .bottom
+        & .date
+          color: white
+
+  & .arrow-wrapper
+    display: none
+  & .swiper-pagination
+    display: none
+.catalog
+  margin-bottom: 50px
+  & .item
+    margin-bottom: 50px
+    &:last-child
+      margin-bottom: 0
+    & .title
+      margin-bottom: 12px
+    & .desc
+      margin-bottom: 25px
+    & .content
+      margin-bottom: 35px
+      & .cart-blog
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+
+
+.category-top
+  margin-bottom: 20px
+  & .title
+    margin-bottom: 8px
+
+.tabs
+  margin-bottom: 30px
+  padding-right: 0
+  & .tab
+    &:last-child
+      margin-right: 20px
+
+.category-list
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 30px 0
+  margin-bottom: 30px
+  & ._anim-items
+    opacity: 0
+    transform: translateY(30%)
+    transition: all 1s
+    &._active
+      opacity: 1
+      transform: translateY(0px)
+
+
+.blog-statistics
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 15px
+  & .name
+    margin-bottom: 12px
+  & .date
+    font-size: 16px
+    color: $black
+.img-preview
+  width: 100%
+  margin-bottom: 15px
+  & img
+    width: 100%
+  & picture
+    display: flex
+    align-items: center
+    justify-content: center
+
+.editor
+  & .short-desc
+    font-weight: 600
+  & p
+    margin-bottom: 20px
+  & h1, & h2, & h3, & h4, & h5, & h6
+    margin-bottom: 12px
+  & ul
+    padding-left: 20px
+    margin: 20px 0
+
+  & img
+    width: 100%
+    max-width: 100%
+    display: block
+    margin-bottom: 20px
+  & a
+    color: $light-blue
+    text-decoration: underline
+
+.blog-page
+  margin-bottom: 100px
+.blog-page__content
+  margin-bottom: 50px
+  & .bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 15px
+    & .author
+      font-weight: 400
+      font-size: 16px
+      line-height: 25px
+      & span
+        font-weight: 500
+        font-size: 18px
+    //& .btn-share
+
+.blog-sidebar
+  & .title
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 15px
+
+  & .related-products
+    margin-bottom: 50px
+    & .content
+      display: grid
+      grid-template-columns: repeat(2, minmax(100px, 500px))
+      grid-gap: 20px
+
+  & .interested
+    & .content
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 20px 0
+      & .cart-blog
+        & .info
+          & .name
+            font-size: 20px
+            line-height: 28px
+
+
+.comments
+  & .comments-top
+    display: grid
+    grid-template-columns: repeat(2, minmax(100px, 300px))
+    grid-template-rows: repeat(2, auto)
+    justify-content: space-between
+    align-items: end
+    grid-gap: 15px 20px
+    margin-bottom: 15px
+  & .title
+    margin-bottom: 0
+  & .total
+    font-weight: 600
+    margin-bottom: 15px
+  & .select
+    grid-row: 1/-1
+    grid-column: 2/3
+  & .content
+    margin-bottom: 20px
+    & .item
+      padding: 20px
+      border: 1px solid #E1E4E8
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+      & .user-info
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 15px
+      & .user-name
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        display: flex
+        align-items: center
+        margin-right: 6px
+        &:after
+          display: block
+          content: ''
+          width: 3px
+          height: 3px
+          border-radius: 50%
+          background: $black
+          margin-left: 6px
+      & .comment-text
+        margin-bottom: 15px
+      & .review-votes
+        display: flex
+        & .like, & .dislike
+          font-weight: 400
+          font-size: 14px
+          line-height: 20px
+          position: relative
+          display: flex
+          align-items: center
+          cursor: pointer
+          &:before
+            content: ''
+            width: 20px
+            height: 20px
+            margin-right: 6px
+            @include bg-center
+              background-size: contain
+        & .like
+          margin-right: 15px
+          &:before
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.16634 7.50004V17.5H0.833008V7.50004H4.16634ZM7.49967 17.5C7.05765 17.5 6.63372 17.3244 6.32116 17.0119C6.0086 16.6993 5.83301 16.2754 5.83301 15.8334V7.50004C5.83301 7.04171 6.01634 6.62504 6.32467 6.32504L11.808 0.833374L12.6913 1.71671C12.9163 1.94171 13.058 2.25004 13.058 2.59171L13.033 2.85837L12.2413 6.66671H17.4997C18.4247 6.66671 19.1663 7.41671 19.1663 8.33337V10C19.1663 10.2167 19.1247 10.4167 19.0497 10.6084L16.533 16.4834C16.283 17.0834 15.6913 17.5 14.9997 17.5H7.49967ZM7.49967 15.8334H15.0247L17.4997 10V8.33337H10.1747L11.1163 3.90004L7.49967 7.52504V15.8334Z' fill='%23888787'/%3E%3C/svg%3E")
+          &.active
+            &:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.1673 8.33301C19.1673 7.40801 18.4173 6.66634 17.5006 6.66634H12.234L13.034 2.85801C13.0507 2.77467 13.059 2.68301 13.059 2.59134C13.059 2.24967 12.9173 1.93301 12.6923 1.70801L11.809 0.833008L6.32565 6.31634C6.01732 6.62467 5.83398 7.04134 5.83398 7.49967V15.833C5.83398 16.275 6.00958 16.699 6.32214 17.0115C6.6347 17.3241 7.05862 17.4997 7.50065 17.4997H15.0006C15.6923 17.4997 16.284 17.083 16.534 16.483L19.0506 10.608C19.1257 10.4163 19.1673 10.2163 19.1673 9.99967V8.33301ZM0.833984 17.4997H4.16732V7.49967H0.833984V17.4997Z' fill='%232362CB'/%3E%3C/svg%3E")
+        & .dislike
+          &:before
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9521 11.9048V1.90479H19.2855V11.9048H15.9521ZM12.6188 1.90479C13.0608 1.90479 13.4848 2.08038 13.7973 2.39294C14.1099 2.7055 14.2855 3.12942 14.2855 3.57145V11.9048C14.2855 12.3631 14.1021 12.7798 13.7938 13.0798L8.31048 18.5715L7.42715 17.6881C7.20215 17.4631 7.06048 17.1548 7.06048 16.8048L7.08548 16.5465L7.87715 12.7381H2.61882C1.69382 12.7381 0.952148 11.9881 0.952148 11.0715V9.40479C0.952148 9.18812 0.993815 8.98812 1.06882 8.79645L3.58548 2.92145C3.83548 2.32145 4.42715 1.90479 5.11882 1.90479H12.6188ZM12.6188 3.57145H5.09382L2.61882 9.40479V11.0715H9.93548L8.99382 15.5048L12.6188 11.8798V3.57145Z' fill='%23888787'/%3E%3C/svg%3E")
+          &.active
+            &:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9521 1.90479V11.9048H19.2855V1.90479H15.9521Z' fill='%23303437'/%3E%3Cpath d='M13.7973 2.39294C13.4848 2.08038 13.0608 1.90479 12.6188 1.90479H5.11882C4.42715 1.90479 3.83548 2.32145 3.58548 2.92145L1.06882 8.79645C0.993815 8.98812 0.952148 9.18812 0.952148 9.40479V11.0715C0.952148 11.9881 1.69382 12.7381 2.61882 12.7381H7.87715L7.08548 16.5465L7.06048 16.8048C7.06048 17.1548 7.20215 17.4631 7.42715 17.6881L8.31048 18.5715L13.7938 13.0798C14.1021 12.7798 14.2855 12.3631 14.2855 11.9048V3.57145C14.2855 3.12942 14.1099 2.7055 13.7973 2.39294Z' fill='%23303437'/%3E%3C/svg%3E")
+
+  & .pagination
+    margin-bottom: 40px
+
+
+@media screen and (max-width: 400px)
+  .blog-sidebar
+    & .related-products
+      & .content
+        grid-gap: 0 10px
+  //.cart-goods
+  //  & .name
+      //font-size: 14px
+  .comments
+    & .comments-top
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      grid-gap: 15px 0
+    & .select
+      grid-column: auto
+      grid-row: auto
+    & .total
+      margin-bottom: 0
+
+
+@media screen and (min-width: 992px)
+
+  .cart-blog
+    & a
+      display: flex
+      flex-direction: column
+    & .img
+      overflow: hidden
+      & img
+        transition: all .4s
+    & .info
+      & .name
+        font-size: 20px
+        line-height: 28px
+    &:hover
+      & .img
+        & img
+          transform: translate(-50%, -50%) scale(1.05)
+      & .info
+        & .name
+          color: $light-blue
+
+  .blog-catalog-top
+    margin-bottom: 40px
+    & .desc
+      max-width: 610px
+    & .popular
+      grid-template-columns: repeat(6, 1fr)
+      grid-gap: 0 20px
+      & .item
+        flex: 1
+        min-width: auto
+        border: 1px solid rgba(0,0,0,0)
+        transition: all .5s
+        border-radius: 2px
+        & .img
+          overflow: hidden
+          & img
+            transition: all .5s
+        &:hover
+          border-color: $light-blue
+          & .img
+            & img
+              transform: scale(1.05)
+      & p
+        margin-top: 6px
+
+
+  .last-news
+    overflow: hidden
+    padding-bottom: 36px
+    margin-bottom: 60px
+  .last-news__slider
+    height: 477px
+    overflow: visible
+    & .swiper-wrapper
+      flex-direction: row
+      & .swiper-slide
+        padding-bottom: 0
+    & .arrow-wrapper
+      display: block
+      & .slider-arrow
+        position: absolute
+        z-index: 1
+        top: 50%
+        transform: translateY(-50%)
+        &.arrow-left
+          left: 20px
+        &.arrow-right
+          right: 20px
+          transform: translateY(-50%) rotate(180deg)
+    & .swiper-pagination
+      display: flex
+      position: static
+      margin-top: 28px
+      & .swiper-pagination-bullet
+        background: #C8C8C8
+        &.swiper-pagination-bullet-active
+          background: $light-blue
+
+
+
+  .catalog
+    & .item
+      margin-bottom: 60px
+      & .title
+        font-size: 36px
+        line-height: 130%
+        margin-bottom: 15px
+      & .desc
+        max-width: 600px
+      & .content
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 0 20px
+        margin-bottom: 30px
+        & .cart-blog
+          margin-bottom: 0
+          display: flex
+          flex-direction: column
+          justify-content: flex-start
+        & .img
+          flex: 0
+        & .info
+          flex: 1
+          display: flex
+          flex-direction: column
+          justify-content: flex-start
+          & .name
+            flex: 1
+            transition: all .4s
+            &:hover
+              color: $light-blue
+          & .bottom
+            flex: 0
+
+      & .btn-border
+        display: inline-block
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        padding: 14px 20px
+        min-width: 230px
+
+
+  .category-top
+    margin-bottom: 25px
+    & .title
+      margin-bottom: 15px
+    & .desc
+      max-width: 610px
+  .tabs
+    max-width: 1260px
+    padding: 0 20px
+    margin: 0 auto 26px auto
+  .category-list
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 40px 20px
+    & .cart-blog
+      //transition: all .7s
+      & .img
+        flex: 0
+      & .info
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+      &:nth-child(3n+1)
+        transition-delay: 0s
+      &:nth-child(3n+2)
+        transition-delay: .2s
+      &:nth-child(3n+3)
+        transition-delay: .4s
+
+
+  .blog-page
+    display: grid
+    grid-template-columns: auto 390px
+    grid-gap: 0 20px
+    margin-bottom: 80px
+    & .blog-page__content
+      margin-bottom: 0
+      & .name
+        font-size: 36px
+        line-height: 130%
+        margin-bottom: 15px
+
+  .editor
+    & h3
+      font-size: 20px
+      line-height: 28px
+
+  .blog-sidebar
+    & .title
+      margin-bottom: 5px
+    & .interested
+      & .title
+        margin-bottom: 15px
+
+
+
+

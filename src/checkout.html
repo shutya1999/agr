@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <div class="checkout">
+            <div class="checkout-wrapper">
+                <h2 class="h2 title">Оформлення замовлення</h2>
+                <div class="checkout-content">
+                    <div class="left">
+                        <div class="checkout-card card-userinfo">
+                            <div class="card-top">
+                                <p class="card-title">Контактна інформація</p>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="card-bottom__wrapper">
+                                    <p class="desc">
+                                        Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                                    </p>
+                                    <div class="form-group">
+                                        <input id="user-name" type="text" name="user-name" class="form-control">
+                                        <label for="user-name">Ім’я*</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="user-lastname" type="text" name="user-lastname" class="form-control">
+                                        <label for="user-lastname">Прізвище*</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="user-surname" type="text" name="user-surname" class="form-control">
+                                        <label for="user-surname">Побатькові</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="user-phone" type="text" name="user-phone" class="form-control">
+                                        <label for="user-phone">Номер телефону*</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="user-email" type="text" name="user-email" class="form-control">
+                                        <label for="user-email">Email*</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                    <div class="form-group _mb0">
+                                        <input type="checkbox" class="checkbox" id="personal-info"
+                                               name="personal-info">
+                                        <label for="personal-info">Даю згоду на обробку персональної інформації</label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-card card-delivery">
+                            <div class="card-top">
+                                <p class="card-title">Доставка</p>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="card-bottom__wrapper">
+                                    <div class="switcher">
+                                        <div class="switcher-wrapper">
+                                            <div class="item _js-btn-delivery">
+                                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M28.2489 5L18.0077 10.801L7.76641 5L0 18.0398L10.379 23.9204V31H25.8455V23.801L36 18.0398L28.2489 5ZM18.0077 13.5274L20.7325 18.0995H15.2879L18.0077 13.5274ZM10.379 21.9254L2.41871 17.4129L8.40935 7.35821L16.7983 12.1095L13.2264 18.0796L12.2058 19.806L12.1497 19.9005L10.8077 22.1542L10.379 21.9254ZM24.0748 29.2736H12.1497V23.3483L14.2571 19.8159H21.7633L24.0748 23.7015V29.2736ZM25.2128 22.1642L24.0748 20.2637L23.8095 19.8159L22.7889 18.0895L19.217 12.1194L27.6008 7.36816L33.6017 17.4129L25.8455 21.806L25.2128 22.1642Z"
+                                                          fill="#004B91"/>
+                                                </svg>
+                                                Агромат
+                                            </div>
+                                            <div class="item _js-btn-delivery">
+                                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M28.6448 11.2143C28.7492 11.181 28.8864 11.2475 29.0237 11.4304C29.0237 11.4304 29.0237 11.4304 35.2285 17.5601C35.591 17.9259 35.591 18.4801 35.2285 18.7516C35.2285 18.7516 35.2285 18.7516 29.0237 24.9755C28.8864 25.1584 28.7492 25.2027 28.6448 25.1473C28.5405 25.0919 28.4746 24.9312 28.4746 24.6984V11.6133C28.4746 11.3861 28.5405 11.2475 28.6448 11.2143Z"
+                                                          fill="#ED1C24"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M18.0302 1H18.4695L18.8923 1.17735C18.8923 1.17735 18.8923 1.17735 25.2783 7.5841C25.5529 7.94988 25.4595 8.22699 25.0038 8.22699C25.0038 8.22699 25.0038 8.22699 22.3571 8.22699C21.9013 8.22699 21.5389 8.59277 21.5389 9.05277C21.5389 9.05277 21.5389 9.05277 21.5389 13.808C21.5389 14.268 21.171 14.6337 20.6219 14.6337C20.6219 14.6337 20.6219 14.6337 15.9711 14.6337C15.5153 14.6337 15.1474 14.268 15.1474 13.808C15.1474 13.808 15.1474 13.808 15.1474 9.05277C15.1474 8.59277 14.785 8.22699 14.3238 8.22699H11.4959C11.0401 8.22699 10.9468 7.94988 11.2213 7.5841C11.2213 7.5841 11.2213 7.5841 17.6129 1.17735L18.0302 1V1Z"
+                                                          fill="#ED1C24"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M8.02574 11.0755C8.14106 11.131 8.21244 11.2917 8.21244 11.5245V24.8811C8.21244 25.1139 8.14106 25.2524 8.02574 25.2968C7.91592 25.3411 7.75669 25.2968 7.56999 25.1582C7.56999 25.1582 7.56999 25.1582 1.2718 18.7514C0.909398 18.4799 0.909398 17.9257 1.2718 17.5599C1.2718 17.5599 1.27181 17.5599 7.56999 11.2474C7.75669 11.0645 7.91592 11.0201 8.02574 11.0755Z"
+                                                          fill="#ED1C24"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M15.9717 21.5894C15.9717 21.5894 15.9717 21.5894 20.6226 21.5894C21.1717 21.5894 21.5396 21.9551 21.5396 22.4151C21.5396 22.4151 21.5396 22.4151 21.5396 27.4474C21.5396 27.9961 21.902 28.3619 22.3577 28.3619H24.8232C25.279 28.3619 25.4602 28.6335 25.0978 28.9106C25.0978 28.9106 25.0978 28.9106 18.8929 35.2231C18.7062 35.406 18.4811 35.5002 18.2505 35.5002C18.0253 35.5002 17.7947 35.406 17.6135 35.2231C17.6135 35.2231 17.6135 35.2231 11.4087 28.9106C11.0408 28.6335 11.222 28.3619 11.6777 28.3619C11.6777 28.3619 11.6777 28.3619 14.3244 28.3619C14.7856 28.3619 15.148 27.9961 15.148 27.4474C15.148 27.4474 15.148 27.4474 15.148 22.4151C15.148 21.9551 15.5159 21.5894 15.9717 21.5894V21.5894Z"
+                                                          fill="#ED1C24"/>
+                                                </svg>
+                                                Нова пошта
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-type">
+                                        <div class="delivery-type__wrapper">
+                                            <div class="item _js-item-delivery active">
+                                                <div class="form-group delivery-radio">
+                                                    <input type="radio" class="radio" id="delivery-agromat-sklad"
+                                                           name="delivery-type" checked>
+                                                    <label for="delivery-agromat-sklad">
+                                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                            <path d="M22.5 38.75H25V41.25H22.5V38.75ZM30 18.75L17.5 25V41.25H20V31.25H40V41.25H42.5V25L30 18.75ZM25 28.75H20V26.25H25V28.75ZM32.5 28.75H27.5V26.25H32.5V28.75ZM40 28.75H35V26.25H40V28.75ZM22.5 33.75H25V36.25H22.5V33.75ZM27.5 33.75H30V36.25H27.5V33.75ZM27.5 38.75H30V41.25H27.5V38.75ZM32.5 38.75H35V41.25H32.5V38.75Z"
+                                                                  fill="#303437"/>
+                                                        </svg>
+                                                        <span class="del-name">
+                                                    Самовивіз зі складу Агромат
+                                                </span>
+                                                        <span class="del-desc">
+                                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                                    фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group delivery-radio">
+                                                    <input type="radio" class="radio" id="delivery-agromat-kiev"
+                                                           name="delivery-type">
+                                                    <label for="delivery-agromat-kiev">
+                                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                            <path d="M15.9375 24.375H28.125L29.0625 26.25H16.875L15.9375 24.375ZM17.1875 28.125H29.375L30.3125 30H18.125L17.1875 28.125ZM37.5 38.125C38.5375 38.125 39.375 37.2875 39.375 36.25C39.375 35.2125 38.5375 34.375 37.5 34.375C36.4625 34.375 35.625 35.2125 35.625 36.25C35.625 37.2875 36.4625 38.125 37.5 38.125ZM39.375 26.875H36.25V30H41.825L39.375 26.875ZM25 38.125C26.0375 38.125 26.875 37.2875 26.875 36.25C26.875 35.2125 26.0375 34.375 25 34.375C23.9625 34.375 23.125 35.2125 23.125 36.25C23.125 37.2875 23.9625 38.125 25 38.125ZM40 25L43.75 30V36.25H41.25C41.25 38.325 39.575 40 37.5 40C35.425 40 33.75 38.325 33.75 36.25H28.75C28.75 38.325 27.0625 40 25 40C22.925 40 21.25 38.325 21.25 36.25H18.75V31.875H21.25V33.75H22.2C22.8875 32.9875 23.8875 32.5 25 32.5C26.1125 32.5 27.1125 32.9875 27.8 33.75H33.75V22.5H18.75C18.75 21.1125 19.8625 20 21.25 20H36.25V25H40Z"
+                                                                  fill="#303437"/>
+                                                        </svg>
+                                                        <span class="del-name">Кур’єром Агромат по Києву та області</span>
+                                                        <span class="del-desc">
+                                                        Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                                        фактично, стандартною "рибою" аж з XVI сторіччя
+                                                    </span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group delivery-radio">
+                                                    <input type="radio" class="radio" id="delivery-agromat-ukraine"
+                                                           name="delivery-type">
+                                                    <label for="delivery-agromat-ukraine">
+                                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                            <path d="M40 25H36.25V20H16.25V36.25H18.75C18.75 38.325 20.425 40 22.5 40C24.575 40 26.25 38.325 26.25 36.25H33.75C33.75 38.325 35.425 40 37.5 40C39.575 40 41.25 38.325 41.25 36.25H43.75V30L40 25ZM22.5 38.125C21.4625 38.125 20.625 37.2875 20.625 36.25C20.625 35.2125 21.4625 34.375 22.5 34.375C23.5375 34.375 24.375 35.2125 24.375 36.25C24.375 37.2875 23.5375 38.125 22.5 38.125ZM33.75 23.75H31.25V32.5H28.75V23.75H26.25V32.5H23.75V23.75H21.25V32.5H18.75V22.5H33.75V23.75ZM37.5 38.125C36.4625 38.125 35.625 37.2875 35.625 36.25C35.625 35.2125 36.4625 34.375 37.5 34.375C38.5375 34.375 39.375 35.2125 39.375 36.25C39.375 37.2875 38.5375 38.125 37.5 38.125ZM36.25 30V26.875H39.375L41.825 30H36.25Z"
+                                                                  fill="#303437"/>
+                                                        </svg>
+                                                        <span class="del-name">Адресна дотсавка товару по Україні від Агромат</span>
+                                                        <span class="del-desc">
+                                                        Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                                        фактично, стандартною "рибою" аж з XVI сторіччя
+                                                    </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="item _js-item-delivery">
+                                                <div class="form-group delivery-radio">
+                                                    <input type="radio" class="radio" id="delivery-np-department"
+                                                           name="delivery-type">
+                                                    <label for="delivery-np-department">
+                                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                            <path d="M22.5 38.75H25V41.25H22.5V38.75ZM30 18.75L17.5 25V41.25H20V31.25H40V41.25H42.5V25L30 18.75ZM25 28.75H20V26.25H25V28.75ZM32.5 28.75H27.5V26.25H32.5V28.75ZM40 28.75H35V26.25H40V28.75ZM22.5 33.75H25V36.25H22.5V33.75ZM27.5 33.75H30V36.25H27.5V33.75ZM27.5 38.75H30V41.25H27.5V38.75ZM32.5 38.75H35V41.25H32.5V38.75Z"
+                                                                  fill="#303437"/>
+                                                        </svg>
+                                                        <span class="del-name">
+                                                    Відділення Нової пошти
+                                                </span>
+                                                        <span class="del-desc">
+                                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                                    фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group delivery-radio">
+                                                    <input type="radio" class="radio" id="delivery-np-courier"
+                                                           name="delivery-type">
+                                                    <label for="delivery-np-courier">
+                                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                            <path d="M15.9375 24.375H28.125L29.0625 26.25H16.875L15.9375 24.375ZM17.1875 28.125H29.375L30.3125 30H18.125L17.1875 28.125ZM37.5 38.125C38.5375 38.125 39.375 37.2875 39.375 36.25C39.375 35.2125 38.5375 34.375 37.5 34.375C36.4625 34.375 35.625 35.2125 35.625 36.25C35.625 37.2875 36.4625 38.125 37.5 38.125ZM39.375 26.875H36.25V30H41.825L39.375 26.875ZM25 38.125C26.0375 38.125 26.875 37.2875 26.875 36.25C26.875 35.2125 26.0375 34.375 25 34.375C23.9625 34.375 23.125 35.2125 23.125 36.25C23.125 37.2875 23.9625 38.125 25 38.125ZM40 25L43.75 30V36.25H41.25C41.25 38.325 39.575 40 37.5 40C35.425 40 33.75 38.325 33.75 36.25H28.75C28.75 38.325 27.0625 40 25 40C22.925 40 21.25 38.325 21.25 36.25H18.75V31.875H21.25V33.75H22.2C22.8875 32.9875 23.8875 32.5 25 32.5C26.1125 32.5 27.1125 32.9875 27.8 33.75H33.75V22.5H18.75C18.75 21.1125 19.8625 20 21.25 20H36.25V25H40Z"
+                                                                  fill="#303437"/>
+                                                        </svg>
+                                                        <span class="del-name">Кур’єром Нової пошти на адресу</span>
+                                                        <span class="del-desc">
+                                                        Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                                        фактично, стандартною "рибою" аж з XVI сторіччя
+                                                    </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-info vis">
+                                        <div class="delivery-info__wrapper">
+                                            <div class="item _delivery-agromat-sklad active">
+                                                <p class="delivery-text">
+                                                    <strong>Як це працює?</strong> Це текст-"риба", що використовується
+                                                    в друкарстві та дизайні.
+                                                    Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                                <div class="select-wrapper">
+                                                    <div class="select" id="select-city_agromat_stock"></div>
+                                                </div>
+                                                <div class="stock-list">
+                                                    <div class="form-group">
+                                                        <input type="radio" class="radio" id="stock-1" name="stock"
+                                                               checked>
+                                                        <label for="stock-1">
+                                                            <img src="img/cart/stock.svg" alt="">
+                                                            Київ, Адреса складу, Пн-Пт 9:00-18:00
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="radio" class="radio" id="stock-2" name="stock">
+                                                        <label for="stock-2">
+                                                            <img src="img/cart/stock.svg" alt="">
+                                                            Київ, Адреса складу, Пн-Пт 9:00-18:00
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="radio" class="radio" id="stock-3" name="stock">
+                                                        <label for="stock-3">
+                                                            <img src="img/cart/stock.svg" alt="">
+                                                            Київ, Адреса складу, Пн-Пт 9:00-18:00
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="radio" class="radio" id="stock-4" name="stock">
+                                                        <label for="stock-4">
+                                                            <img src="img/cart/stock.svg" alt="">
+                                                            Київ, Адреса складу, Пн-Пт 9:00-18:00
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item _delivery-agromat-kiev">
+                                                <p class="delivery-text">
+                                                    <strong>Як це працює?</strong> Це текст-"риба", що використовується
+                                                    в друкарстві та дизайні.
+                                                    Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                                <div class="select-wrapper">
+                                                    <div class="select" id="select-city_agromat_kiev"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="street" type="text" name="street" class="form-control">
+                                                    <label for="street">Вулиця*</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                                <div class="grid-3">
+                                                    <div class="form-group">
+                                                        <input id="apartment" type="text" name="apartment"
+                                                               class="form-control">
+                                                        <label for="apartment">Дім*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="corpus" type="text" name="corpus"
+                                                               class="form-control">
+                                                        <label for="corpus">Корпус</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="app-number" type="text" name="app-number"
+                                                               class="form-control">
+                                                        <label for="app-number">Кв*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid-2">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" class="checkbox" id="floor-checkbox"
+                                                               name="floor-checkbox">
+                                                        <label for="floor-checkbox">Підйом на поверх</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="checkbox" class="checkbox" id="elevator"
+                                                               name="elevator">
+                                                        <label for="elevator">Наявність ліфту</label>
+                                                    </div>
+                                                </div>
+                                                <div class="grid-3">
+                                                    <div class="form-group">
+                                                        <input id="intercom" type="text" name="intercom"
+                                                               class="form-control">
+                                                        <label for="intercom">Домофон</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="floor" type="text" name="floor" class="form-control">
+                                                        <label for="floor">Поверх*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group date-group">
+                                                    <input id="date" type="text" name="date" class="form-control">
+                                                    <label for="date">Вкажіть дату доставки</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                                <p class="delivery-cost">Орієнтовна вартість доставки:
+                                                    <strong><span>0</span> грн</strong></p>
+                                            </div>
+                                            <div class="item _delivery-agromat-ukraine">
+                                                <p class="delivery-text">
+                                                    <strong>Як це працює?</strong> Це текст-"риба", що використовується
+                                                    в друкарстві та дизайні.
+                                                    Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                                <div class="select-wrapper">
+                                                    <div class="select" id="select-city_agromat_ukraine"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="street" type="text" name="street" class="form-control">
+                                                    <label for="street">Вулиця*</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                                <div class="grid-3">
+                                                    <div class="form-group">
+                                                        <input id="apartment" type="text" name="apartment"
+                                                               class="form-control">
+                                                        <label for="apartment">Дім*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="corpus" type="text" name="corpus"
+                                                               class="form-control">
+                                                        <label for="corpus">Корпус</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="app-number" type="text" name="app-number"
+                                                               class="form-control">
+                                                        <label for="app-number">Кв*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item _delivery-np-department">
+                                                <p class="delivery-text">
+                                                    <strong>Як це працює?</strong> Це текст-"риба", що використовується
+                                                    в друкарстві та дизайні.
+                                                    Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                                <div class="select-wrapper">
+                                                    <div class="select" id="select-city_np-city"></div>
+                                                </div>
+                                                <div class="select-wrapper _department">
+                                                    <div class="select" id="select-city_np-department"></div>
+                                                    <a href=""></a>
+                                                </div>
+                                            </div>
+                                            <div class="item _delivery-np-courier">
+                                                <p class="delivery-text">
+                                                    <strong>Як це працює?</strong> Це текст-"риба", що використовується
+                                                    в друкарстві та дизайні.
+                                                    Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                                <div class="select-wrapper">
+                                                    <div class="select" id="select-city_np-courier"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="street" type="text" name="street" class="form-control">
+                                                    <label for="street">Вулиця*</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                                <div class="grid-3">
+                                                    <div class="form-group">
+                                                        <input id="apartment" type="text" name="apartment"
+                                                               class="form-control">
+                                                        <label for="apartment">Дім*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="corpus" type="text" name="corpus"
+                                                               class="form-control">
+                                                        <label for="corpus">Корпус</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="app-number" type="text" name="app-number"
+                                                               class="form-control">
+                                                        <label for="app-number">Кв*</label>
+                                                        <div class="help-block">Error</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recipient">
+                                        <div class="form-group recipient-checkbox">
+                                            <input type="checkbox" class="checkbox" id="recipient" name="recipient">
+                                            <label for="recipient">Замовлення отримує інша людина</label>
+                                        </div>
+                                        <div class="recipient-data _js-checkout-accordion">
+                                            <p class="recipient-message">
+                                                Вкажіть ім’я отримувача замовлення та його контактну інформацію.
+                                            </p>
+                                            <div class="form-group">
+                                                <input id="recipient-name" type="text" name="recipient-name"
+                                                       class="form-control">
+                                                <label for="recipient-name">Ім’я*</label>
+                                                <div class="help-block">Error</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="recipient-lastname" type="text" name="recipient-lastname"
+                                                       class="form-control">
+                                                <label for="recipient-lastname">Прізвище*</label>
+                                                <div class="help-block">Error</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="recipient-surname" type="text" name="recipient-surname"
+                                                       class="form-control">
+                                                <label for="recipient-surname">Побатькові</label>
+                                                <div class="help-block">Error</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="recipient-phone" type="text" name="recipient-phone"
+                                                       class="form-control">
+                                                <label for="recipient-phone">Номер телефону*</label>
+                                                <div class="help-block">Error</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-comment">
+                                        <div class="form-group _mb0">
+                                            <input type="checkbox" class="checkbox" id="comment-checkbox"
+                                                   name="comment-checkbox">
+                                            <label for="comment-checkbox">Додати коментар до замовлення</label>
+                                            <div class="help-block">Error</div>
+                                        </div>
+                                        <div class="form-group comment-group">
+                                            <textarea name="comment" id="comment" class="form-control"></textarea>
+                                            <label for="comment">Коментар до Замовлення</label>
+                                            <div class="help-block">Error</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-card card-payment">
+                            <div class="card-top">
+                                <p class="card-title">Спосіб оплати</p>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="card-bottom__wrapper">
+                                    <div class="item _js-payment active">
+                                        <div class="form-group pay-radio">
+                                            <input type="radio" class="radio" id="pay-receiving" name="payment" checked>
+                                            <label for="pay-receiving">
+                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                    <path d="M21.25 25H23.75V35H21.25V25ZM30 25H26.25C25.5625 25 25 25.5625 25 26.25V33.75C25 34.4375 25.5625 35 26.25 35H30C30.6875 35 31.25 34.4375 31.25 33.75V26.25C31.25 25.5625 30.6875 25 30 25ZM28.75 32.5H27.5V27.5H28.75V32.5ZM37.5 25H33.75C33.0625 25 32.5 25.5625 32.5 26.25V33.75C32.5 34.4375 33.0625 35 33.75 35H37.5C38.1875 35 38.75 34.4375 38.75 33.75V26.25C38.75 25.5625 38.1875 25 37.5 25ZM36.25 32.5H35V27.5H36.25V32.5Z"
+                                                          fill="#2362CB"/>
+                                                    <path d="M17.5 20V40H42.5V20H17.5ZM20 37.5V22.5H40V37.5H20Z"
+                                                          fill="#2362CB"/>
+                                                </svg>
+                                                Оплата при отриманні
+                                            </label>
+                                        </div>
+                                        <div class="pay-data _js-checkout-accordion">
+                                            <div class="pay-data__wrapper">
+                                                <p class="pay-data__text">
+                                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item _js-payment">
+                                        <div class="form-group pay-radio">
+                                            <input type="radio" class="radio" id="pay-card" name="payment">
+                                            <label for="pay-card">
+                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                    <path d="M34.2293 34.8333C35.8977 34.8333 37.2502 33.4808 37.2502 31.8125C37.2502 30.1441 35.8977 28.7916 34.2293 28.7916C32.561 28.7916 31.2085 30.1441 31.2085 31.8125C31.2085 33.4808 32.561 34.8333 34.2293 34.8333Z"
+                                                          fill="#2362CB"/>
+                                                    <path d="M30 31.8125C30 30.8277 30.4785 29.9613 31.2083 29.4103C30.6885 29.0106 30.0516 28.7931 29.3958 28.7916C28.5947 28.7916 27.8263 29.1099 27.2598 29.6764C26.6933 30.2429 26.375 31.0113 26.375 31.8125C26.375 32.6136 26.6933 33.382 27.2598 33.9485C27.8263 34.515 28.5947 34.8333 29.3958 34.8333C30.0516 34.8318 30.6885 34.6144 31.2083 34.2146C30.8341 33.9356 30.5301 33.5733 30.3204 33.1563C30.1106 32.7393 30.0009 32.2792 30 31.8125Z"
+                                                          fill="#2362CB"/>
+                                                    <path d="M39.6665 20.3334H20.3332C19.0004 20.3334 17.9165 21.4172 17.9165 22.75V37.25C17.9165 38.5828 19.0004 39.6667 20.3332 39.6667H39.6665C40.9993 39.6667 42.0832 38.5828 42.0832 37.25V22.75C42.0832 21.4172 40.9993 20.3334 39.6665 20.3334ZM20.3332 37.25V22.75H39.6665L39.6689 37.25H20.3332Z"
+                                                          fill="#2362CB"/>
+                                                </svg>
+                                                Оплата онлайн
+                                            </label>
+                                        </div>
+                                        <div class="pay-data _js-checkout-accordion">
+                                            <div class="pay-data__wrapper">
+                                                <p class="pay-data__text">
+                                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item _js-payment">
+                                        <div class="form-group pay-radio">
+                                            <input type="radio" class="radio" id="pay-privat" name="payment">
+                                            <label for="pay-privat">
+                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                    <rect x="14" y="14" width="32" height="32" fill="url(#pattern0)"/>
+                                                    <defs>
+                                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox"
+                                                                 width="1" height="1">
+                                                            <use xlink:href="#image0_2418_51526"
+                                                                 transform="scale(0.00166667)"/>
+                                                        </pattern>
+                                                        <image id="image0_2418_51526" width="600" height="600"
+                                                               xlink:href="data:image/png;base64,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"/>
+                                                    </defs>
+                                                </svg>
+                                                Оплата через Приват 24
+                                            </label>
+                                        </div>
+                                        <div class="pay-data _js-checkout-accordion">
+                                            <div class="pay-data__wrapper">
+                                                <p class="pay-data__text">
+                                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item yur_osoba _js-payment">
+                                        <div class="form-group pay-radio">
+                                            <input type="radio" class="radio" id="pay-legal-entity" name="payment">
+                                            <label for="pay-legal-entity">
+                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="60" height="60" rx="2" fill="#F7F7F7"/>
+                                                    <path d="M27.5832 34.8333V33.625H19.1369L19.1248 38.4583C19.1248 39.7996 20.2003 40.875 21.5415 40.875H38.4582C39.7994 40.875 40.8748 39.7996 40.8748 38.4583V33.625H32.4165V34.8333H27.5832ZM39.6665 23.9583H34.8211V21.5417L32.4044 19.125H27.5711L25.1544 21.5417V23.9583H20.3332C19.004 23.9583 17.9165 25.0458 17.9165 26.375V30C17.9165 31.3413 18.9919 32.4167 20.3332 32.4167H27.5832V30H32.4165V32.4167H39.6665C40.9957 32.4167 42.0832 31.3292 42.0832 30V26.375C42.0832 25.0458 40.9957 23.9583 39.6665 23.9583ZM32.4165 23.9583H27.5832V21.5417H32.4165V23.9583Z"
+                                                          fill="#2362CB"/>
+                                                </svg>
+                                                Безготівкова оплати для юрособи
+                                            </label>
+                                        </div>
+                                        <div class="pay-data _js-checkout-accordion">
+                                            <div class="pay-data__wrapper">
+                                                <p class="pay-data__text">Введіть номер та назву юридичної особи. </p>
+                                                <div class="form-group">
+                                                    <input id="legal-entity_name" type="text" name="legal-entity_name"
+                                                           class="form-control">
+                                                    <label for="legal-entity_name">Назва юридичної особи</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="legal-entity_code" type="text" name="legal-entity_code"
+                                                           class="form-control">
+                                                    <label for="legal-entity_code">Код</label>
+                                                    <div class="help-block">Error</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn-default btn-submit" type="button">Підтвердити замовлення</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="checkout-card card-goods">
+                            <div class="card-top">
+                                <p class="card-title">Ваше замовлення:</p>
+                                <a href="/cart.html" class="btn-icon btn-edit card-top__btn">Редагувати</a>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="card-bottom__wrapper">
+                                    <div class="item">
+                                        <div class="item-top">
+                                            <div class="img">
+                                                <picture>
+                                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="info">
+                                                <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                <div class="price-wrapper">
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-5%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 172.30</span> грн / шт
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <p>
+                                                Кількість:
+                                                <span>22<small> шт</small></span>
+                                            </p>
+                                            <p>
+                                                Вартість:
+                                                <span><strong>3 000.00</strong><small> грн</small></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-top">
+                                            <div class="img">
+                                                <picture>
+                                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="info">
+                                                <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                <div class="price-wrapper">
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-5%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 172.30</span> грн / шт
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <p>
+                                                Кількість:
+                                                <span>22<small> шт</small></span>
+                                            </p>
+                                            <p>
+                                                Вартість:
+                                                <span><strong>3 000.00</strong><small> грн</small></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-top">
+                                            <div class="img">
+                                                <picture>
+                                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                                </picture>
+                                            </div>
+                                            <div class="info">
+                                                <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                <div class="price-wrapper">
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-5%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 172.30</span> грн / шт
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <p>
+                                                Кількість:
+                                                <span>22<small> шт</small></span>
+                                            </p>
+                                            <p>
+                                                Вартість:
+                                                <span><strong>3 000.00</strong><small> грн</small></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-card card-cost">
+                            <div class="card-top">
+                                <p class="card-title">Загальна сумма замовлення</p>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="card-bottom__wrapper">
+                                    <div class="cost-list">
+                                        <div class="item">
+                                            <p>Варітсть замовлення:</p>
+                                            <p>
+                                                <span>6 000.00</span> <small>грн</small>
+                                            </p>
+                                        </div>
+                                        <div class="item">
+                                            <p>Знижка:</p>
+                                            <p>
+                                                <span>1 000.00</span> <small>грн</small>
+                                            </p>
+                                        </div>
+                                        <div class="item">
+                                            <p>Доставка:</p>
+                                            <p>
+                                                <span>500.00</span> <small>грн</small>
+                                            </p>
+                                        </div>
+                                        <div class="item _total">
+                                            <p>До сплати:</p>
+                                            <p>
+                                                <span>6 500.00</span> <small>грн</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="promocode _js-promocode">
+                                        <div class="btn-default show-promocode _js-show-promocode">У вас є промокод?
+                                        </div>
+                                        <div class="hidden-promocode">
+                                            <div class="form-group">
+                                                <input id="promocode-desktop" type="text" name="promocode"
+                                                       class="form-control">
+                                                <label for="promocode-desktop">Введіть код</label>
+                                            </div>
+                                            <div class="btn-default">Застосувати код</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-default btn-submit">Підтвердити замовлення</button>
+                                    <div class="form-group _mb0 privacy-policy">
+                                        <input type="checkbox" class="checkbox" id="privacy-policy"
+                                               name="privacy-policy">
+                                        <label for="privacy-policy">
+                                            <span>
+                                                Підтверджую замовлення і погоджуюся з
+                                                <a href="">правилами користування</a>
+                                            </span>
+                                        </label>
+                                        <div class="help-block">Error</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+@@include('_footer.html')
+
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="js/script.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

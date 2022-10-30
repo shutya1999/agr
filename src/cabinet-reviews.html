@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Особистий кабінет - Історія покупок</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cabinet.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="cabinet">
+        <div class="container">
+            <div class="cabinet-reviews">
+                <div class="top">
+                    <a href="" class="top-back">Відгуки</a>
+                    <div class="cabinet-filter">
+                        <p class="total-found">Всього відгуків: <span>8</span></p>
+                        <button type="button" class="sort">Сортування</button>
+                    </div>
+                </div>
+
+                <div class="reviews-items">
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="prod-img">
+                                <picture>
+                                    <source srcset="img/prod/0.webp" type="image/webp">
+                                    <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                        </div>
+                        <div class="item-content">
+                            <div class="review-star">
+                                <div class="review-star__grey">
+                                    <span class="review-star__count" style="width: calc(100% * 4 / 5)"></span>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <div class="user-name">Петро Птеров</div>
+                                <div class="date">12 січня 2021</div>
+                            </div>
+                            <p class="review-text">
+                                Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку
+                            </p>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Переваги:</p>
+                                <span>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.</span>
+                            </div>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Недоліки:</p>
+                                <span>немає</span>
+                            </div>
+                            <div class="review-votes">
+                                <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                            </div>
+
+                            <div class="answer">
+                                <div class="shop-info">
+                                    <div class="icon">
+                                        <img src="img/agromat-review-logo.svg" alt="">
+                                    </div>
+                                    <p class="shop-name">Агромат</p>
+                                    <div class="shop-date">12 січня 2021</div>
+                                </div>
+                                <p class="answer-text">
+                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                                </p>
+                                <div class="review-votes">
+                                    <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                    <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn-default btn-show">дивитися на сторінці</a>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="prod-img">
+                                <picture>
+                                    <source srcset="img/prod/0.webp" type="image/webp">
+                                    <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                        </div>
+                        <div class="item-content">
+                            <div class="review-star">
+                                <div class="review-star__grey">
+                                    <span class="review-star__count" style="width: calc(100% * 4 / 5)"></span>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <div class="user-name">Петро Птеров</div>
+                                <div class="date">12 січня 2021</div>
+                            </div>
+                            <p class="review-text">
+                                Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку
+                            </p>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Переваги:</p>
+                                <span>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.</span>
+                            </div>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Недоліки:</p>
+                                <span>немає</span>
+                            </div>
+                            <div class="review-votes">
+                                <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                            </div>
+
+                            <div class="answer">
+                                <div class="shop-info">
+                                    <div class="icon">
+                                        <img src="img/agromat-review-logo.svg" alt="">
+                                    </div>
+                                    <p class="shop-name">Агромат</p>
+                                    <div class="shop-date">12 січня 2021</div>
+                                </div>
+                                <p class="answer-text">
+                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                                </p>
+                                <div class="review-votes">
+                                    <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                    <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn-default btn-show">дивитися на сторінці</a>
+                    </div>
+                    <div class="item">
+                        <div class="item-top">
+                            <div class="prod-img">
+                                <picture>
+                                    <source srcset="img/prod/0.webp" type="image/webp">
+                                    <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                        </div>
+                        <div class="item-content">
+                            <div class="review-star">
+                                <div class="review-star__grey">
+                                    <span class="review-star__count" style="width: calc(100% * 4 / 5)"></span>
+                                </div>
+                            </div>
+                            <div class="user-info">
+                                <div class="user-name">Петро Птеров</div>
+                                <div class="date">12 січня 2021</div>
+                            </div>
+                            <p class="review-text">
+                                Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є,
+                                фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку
+                            </p>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Переваги:</p>
+                                <span>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.</span>
+                            </div>
+                            <div class="review-essentials">
+                                <p class="essentials-title">Недоліки:</p>
+                                <span>немає</span>
+                            </div>
+                            <div class="review-votes">
+                                <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                            </div>
+
+                            <div class="answer">
+                                <div class="shop-info">
+                                    <div class="icon">
+                                        <img src="img/agromat-review-logo.svg" alt="">
+                                    </div>
+                                    <p class="shop-name">Агромат</p>
+                                    <div class="shop-date">12 січня 2021</div>
+                                </div>
+                                <p class="answer-text">
+                                    Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                                </p>
+                                <div class="review-votes">
+                                    <div class="like active" onclick="reviewVotes(this, 'like');">5</div>
+                                    <div class="dislike active" onclick="reviewVotes(this, 'dislike');">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn-default btn-show">дивитися на сторінці</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@@include('_footer.html')
+
+<script src="cdn/js/maskinput.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cabinet.js"></script>
+</body>
+</html>

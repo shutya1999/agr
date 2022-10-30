@@ -1,0 +1,878 @@
+$black: #303437
+$dark-blue: #004B91
+$light-blue: #2362CB
+$red: #EB2915
+
+@mixin bg-center
+  background-position: center
+  background-repeat: no-repeat
+  @content
+
+strong
+  font-weight: 600
+
+.btn-icon
+  font-weight: 600
+  font-size: 16px
+  line-height: 120%
+  color: $light-blue
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  cursor: pointer
+  &:before
+    content: ''
+    width: 24px
+    height: 24px
+    margin-right: 8px
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM8 9H16V19H8V9ZM15.5 4L14.5 3H9.5L8.5 4H5V6H19V4H15.5Z' fill='%232362CB'/%3E%3C/svg%3E")
+    @include bg-center
+      background-size: contain
+
+.btn-icon
+  &:before
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.71 7.54C21.1 7.15 21.1 6.5 20.71 6.13L18.37 3.79C18 3.4 17.35 3.4 16.96 3.79L15.12 5.62L18.87 9.37L20.71 7.54ZM3 17.75V21.5H6.75L17.81 10.43L14.06 6.68L3 17.75Z' fill='%232362CB'/%3E%3C/svg%3E")
+
+.cart
+  & .title
+    padding-top: 20px
+
+.btn-default, .btn-border
+  transition: all .3s
+
+.cart-wrapper
+  background: #FFFFFF
+  border: 1px solid #E1E4E8
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08)
+  border-radius: 2px
+  margin-bottom: 50px
+  & .cart-content
+    & .cart-content__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid #E1E4E8
+      padding: 20px
+      & .cart-top__title
+        font-weight: 600
+        font-size: 20px
+        line-height: 120%
+    & .item
+      padding: 20px
+      border-bottom: 1px solid #E1E4E8
+      & .item-top
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(2, auto)
+        grid-gap: 0 10px
+        margin-bottom: 20px
+        & .img
+          width: 135px
+          height: 135px
+          position: relative
+          & picture
+            display: flex
+            width: 100%
+            height: 100%
+          & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+          & .goods-label
+            position: absolute
+            top: 7px
+            left: 7px
+        & .info
+          & .name
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            & .prod-name
+              font-weight: 600
+              font-size: 20px
+              line-height: 25px
+              margin: 0 5px 12px 0
+          & .price
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            letter-spacing: 0px
+            & span
+              font-size: 20px
+              font-weight: 600
+
+      & .cart-calc
+        display: grid
+        grid-template-columns: auto 85px
+        grid-template-rows: repeat(2, auto)
+        grid-gap: 12px 20px
+        margin-bottom: 20px
+        & .counter
+          & input
+            font-size: 20px
+          & .btn-count
+            &.btn-decrement:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 14V13H18V14H7Z' fill='%23303437'/%3E%3C/svg%3E")
+            &.btn-increment:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 12.3519V13.6481H13.7655V18H12.2671V13.6481H8V12.3519H12.2671V8H13.7655V12.3519H18Z' fill='%23303437'/%3E%3C/svg%3E")
+
+        & .measurement
+          display: block
+          & .measurement-select
+            font-size: 18px
+          & .measurement-list
+            & li
+              font-size: 18px
+        & .measurement-text
+          color: #646464
+
+      & .cart-bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        & .total-text
+          font-weight: 400
+          font-size: 18px
+          line-height: 150%
+        & .total-number
+          font-weight: 400
+          font-size: 20px
+          line-height: 150%
+          & span
+            font-weight: 600
+            font-size: 20px
+            line-height: 100%
+        & .btn-delete
+          display: none
+      & .btn-delete
+        min-width: 36px
+        max-width: 36px
+        min-height: 36px
+        max-height: 36px
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2857 26.5556C10.2857 27.9 11.4429 29 12.8571 29H23.1429C24.5571 29 25.7143 27.9 25.7143 26.5556V11.8889H10.2857V26.5556ZM12.8571 14.3333H23.1429V26.5556H12.8571V14.3333ZM22.5 8.22222L21.2143 7H14.7857L13.5 8.22222H9V10.6667H27V8.22222H22.5Z' fill='%23C8C8C8'/%3E%3C/svg%3E")
+        @include bg-center
+          background-size: contain
+  & .cart-res
+    background: rgba(35, 98, 203, 0.1)
+    & .top
+      padding: 20px
+      font-weight: 600
+      font-size: 20px
+      line-height: 120%
+      border-bottom: 1px solid #E1E4E8
+    & .cost
+      padding: 20px
+      & .cost-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 13px
+        & .l
+          font-size: 18px
+          line-height: 150%
+        & .r
+          font-size: 16px
+          line-height: 20px
+          & span
+            font-size: 20px
+            line-height: 100%
+        &._total
+          margin-bottom: 16px
+          & .l
+            font-weight: 600
+          & .r
+            font-weight: 400
+            & span
+              font-weight: 600
+      & .btns
+        display: grid
+        grid-template-rows: repeat(2, auto)
+        grid-gap: 17px 0
+        & .btn-default
+          border-radius: 2px
+        & .btn-border
+          background-color: white
+          transition: all .3s
+
+
+.promocode
+  & .hidden-promocode
+    display: none
+    & .form-control
+      background-color: white
+  &.active
+    & .hidden-promocode
+      display: block
+    & .show-promocode
+      display: none
+
+
+@media screen and (max-width: 400px)
+  .cart-wrapper
+    & .cart-content
+      & .item
+        & .item-top
+          & .info
+            & .name
+              & .prod-name
+                font-size: 14px
+                line-height: 16px
+              & .btn-delete
+                min-width: 32px
+                max-width: 32px
+                min-height: 32px
+                max-height: 32px
+            & .price
+              font-size: 14px
+              & span
+                font-size: 16px
+                line-height: 16px
+            & .old-price_wrap
+              & .discount
+                font-size: 14px
+                line-height: 20px
+              & .old-price
+                font-size: 14px
+          & .img
+            width: 100px
+            height: 100px
+._mb0
+  margin-bottom: 0
+.checkbox
+  & + label
+    font-size: 16px
+    line-height: 150%
+    align-items: flex-start
+    &:before
+      margin-top: 3px
+.button-navigation
+  display: flex
+  flex-direction: column
+  grid-gap: 12px 0
+  margin-top: 20px
+  & .btn-default
+    line-height: 56px
+
+.checkout
+  padding-top: 20px
+  --del-type: 0
+  margin-bottom: 20px
+  & .checkout-content
+    display: flex
+    flex-direction: column-reverse
+    & .left, & .right
+      overflow: hidden
+  & .title
+    margin-bottom: 18px
+    font-size: 28px
+    line-height: 120%
+
+  & .checkout-card
+    background: #FFFFFF
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+    border: 1px solid #E1E4E8
+    margin-bottom: 20px
+    & .card-top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 20px
+      border-bottom: 1px solid #E1E4E8
+      border-radius: 2px 2px 0 0
+      cursor: pointer
+      & .card-title
+        font-weight: 600
+        font-size: 20px
+        line-height: 120%
+    & .card-bottom
+      transition: all .4s
+      overflow: visible
+      &._hide
+        overflow: hidden
+        max-height: 0!important
+    &.card-goods
+      & .card-bottom
+        & .item
+          padding: 20px
+          border-bottom: 1px solid #E1E4E8
+          &:last-child
+            border: none
+          & .item-top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 20px
+            & .img
+              margin-right: 10px
+              & img
+                width: 48px
+                height: 48px
+                object-fit: cover
+            & .price-wrapper
+              display: none
+            & .name
+              cursor: pointer
+              font-weight: 600
+              font-size: 20px
+              line-height: 120%
+              color: #303437
+              transition: all .3s
+              &:hover
+                color: $light-blue
+          & .item-bottom
+            display: flex
+            flex-direction: column
+            gap: 8px 0
+            & p
+              display: flex
+              align-items: center
+              justify-content: space-between
+              font-weight: 400
+              font-size: 20px
+              line-height: 150.5%
+              & span
+                font-size: 18px
+                & small
+                  font-size: 16px
+    &.card-cost
+      background: rgba(35, 98, 203, 0.1)
+      & .card-bottom
+        & .card-bottom__wrapper
+          padding: 20px
+      & .cost-list
+        margin-bottom: 20px
+        & .item
+          display: flex
+          align-items: center
+          justify-content: space-between
+          margin-bottom: 13px
+          &:last-child
+            margin-bottom: 0
+          & p
+            font-size: 18px
+            line-height: 20px
+            & small
+              font-size: 16px
+          &._total
+            & p
+              & span
+                font-weight: 600
+      & .promocode
+        margin-bottom: 20px
+        & .hidden-promocode
+          display: none
+          & .form-control
+            background-color: white
+        &.active
+          & .hidden-promocode
+            display: block
+          & .show-promocode
+            display: none
+      & .btn-submit
+        display: none
+      & .privacy-policy
+        & .checkbox
+          & + label
+            & a
+              color: $light-blue
+              text-decoration: underline
+    &.card-userinfo
+      & .card-bottom
+        & .card-bottom__wrapper
+          padding: 20px
+      & .desc
+        margin-bottom: 20px
+    &.card-delivery
+      & .switcher
+        padding: 20px 20px 13px 20px
+        cursor: pointer
+        & .switcher-wrapper
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          position: relative
+          &:before, &:after
+            content: ''
+            position: absolute
+            left: 0
+            width: 50%
+            transition: all .2s
+            transform: translateX(calc(100% * var(--del-type)))
+          &:before
+            top: 0
+            height: calc(100% - 3px)
+            background: rgba(39, 104, 213, 0.11)
+            border-radius: 2px 2px 0 0
+          &:after
+            bottom: 0
+            height: 3px
+            background: #0073de
+        & .item
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          font-weight: 500
+          font-size: 18px
+          line-height: 25px
+          letter-spacing: 0.1px
+          padding: 8px 0 7px 0
+          border-bottom: 3px solid #cfd4da
+          & svg
+            display: block
+            width: 100%
+            max-width: 35px
+          //&.active
+          //  border-color: $light-blue
+
+      & .delivery-type
+        margin-bottom: 20px
+        overflow: hidden
+        & .delivery-type__wrapper
+          display: flex
+          flex-wrap: nowrap
+          transition: all .3s
+          transform: translateX(calc(-100% * var(--del-type)))
+          & .item
+            width: 100%
+            min-width: 100%
+            padding: 0 20px
+            height: 0
+            &.active
+              height: auto
+        & .delivery-radio
+          margin-bottom: 13px
+          &:last-child
+            margin: 0
+          & .radio
+            & + label
+              position: relative
+              padding-left: 34px
+              display: grid
+              grid-template-columns: 60px auto
+              grid-template-rows: 1fr
+              grid-gap: 14px 6px
+              font-weight: 400
+              font-size: 18px
+              line-height: 150%
+              & .del-desc
+                grid-column: 1/3
+                color: #888787
+                display: none
+              &:before
+                position: absolute
+                left: 0
+                top: 17px
+            &:checked
+              & + label
+                grid-template-rows: repeat(2, auto)
+                & .del-desc
+                  display: block
+      & .delivery-info
+        padding-top: 20px
+        border-top: 1px solid #E1E4E8
+        overflow: hidden
+        --del-info-counter: 0
+        padding-bottom: 20px
+        position: relative
+        z-index: 1
+        &.vis
+          overflow: visible
+        & .delivery-info__wrapper
+          display: flex
+          flex-wrap: nowrap
+          transition: all .4s
+          transform: translateX(calc(-100% * var(--del-info-counter)))
+          & .item
+            padding: 0 20px
+            min-width: 100%
+            height: 0
+            overflow: hidden
+            &.active
+              overflow: visible
+              height: auto
+            & .delivery-text
+              margin-bottom: 20px
+            & .select-wrapper
+              min-height: 58px
+            & .grid-3
+              display: grid
+              grid-template-columns: repeat(3, 1fr)
+              grid-gap: 0 30px
+              margin-bottom: 20px
+              & .form-group
+                margin-bottom: 0
+            & .grid-2
+              display: grid
+              grid-template-columns: repeat(2, 1fr)
+              grid-gap: 0 23px
+              margin-bottom: 20px
+              & .form-group
+                margin-bottom: 0
+            &._delivery-agromat-sklad
+              & .stock-list
+                margin-top: 20px
+                & .form-group
+                  margin-bottom: 12px
+                  &:last-child
+                    margin-bottom: 0
+                  & .radio
+                    & + label
+                      align-items: flex-start
+                      & img
+                        min-width: 24px
+                        max-width: 24px
+                        margin-right: 6px
+                      &:before
+                        margin-right: 6px
+            &._delivery-agromat-kiev
+              & .select-wrapper
+                margin-bottom: 20px
+              & .date-group
+                margin-bottom: 12px
+              & .delivery-cost
+                & strong
+                  font-weight: 400
+                  color: $light-blue
+            &._delivery-agromat-ukraine
+              & .select-wrapper
+                margin-bottom: 20px
+              & .grid-3
+                margin-bottom: 0
+            &._delivery-np-department
+              & .select-wrapper
+                margin-bottom: 20px
+                &._department
+                  display: flex
+                  justify-content: space-between
+                  align-items: center
+                  gap: 0 10px
+                  margin-bottom: 0
+                  & a
+                    display: block
+                    min-width: 36px
+                    max-width: 36px
+                    min-height: 36px
+                    max-height: 36px
+                    cursor: pointer
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_3706_89545)'%3E%3Cpath d='M30.75 4.5L30.51 4.545L22.5 7.65L13.5 4.5L5.04 7.35C4.725 7.455 4.5 7.725 4.5 8.07V30.75C4.5 31.17 4.83 31.5 5.25 31.5L5.49 31.455L13.5 28.35L22.5 31.5L30.96 28.65C31.275 28.545 31.5 28.275 31.5 27.93V5.25C31.5 4.83 31.17 4.5 30.75 4.5ZM22.5 28.5L13.5 25.335V7.5L22.5 10.665V28.5Z' fill='%23888787'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3706_89545'%3E%3Crect width='36' height='36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+            &._delivery-np-courier
+              & .select-wrapper
+                margin-bottom: 20px
+              & .grid-3
+                margin-bottom: 0
+      & .recipient
+        padding: 0 20px 20px 20px
+        & .recipient-checkbox
+          margin: 0
+        & .recipient-message
+          font-weight: 400
+          font-size: 16px
+          line-height: 150%
+          color: #888787
+          margin: 10px 0 15px 0
+        & .recipient-data
+          opacity: 0
+          overflow: hidden
+          &.active
+            max-height: var(--height)!important
+            animation: fade-in .3s
+            animation-fill-mode: forwards
+            animation-delay: .2s
+      & .delivery-comment
+        border-top: 1px solid #E1E4E8
+        padding: 20px 20px 8px 20px
+        & .form-group
+          position: relative
+        & .comment-group
+          margin: 12px 0 0 0
+          //display: none
+          opacity: 0
+          overflow: hidden
+          max-height: 0
+          & .form-control
+            min-height: 140px
+          &.active
+            margin-bottom: 12px
+            max-height: 140px
+            //max-height: var(--height)!important
+            animation: fade-in .3s
+            animation-fill-mode: forwards
+            animation-delay: .2s
+    &.card-payment
+      & .card-bottom
+        & .card-bottom__wrapper
+          & .item
+            padding: 10px 20px
+            &.active
+              padding-bottom: 0
+              & .pay-data
+                max-height: var(--height)!important
+                animation: fade-in .3s
+                animation-fill-mode: forwards
+                animation-delay: .2s
+            & .pay-radio
+              margin: 0
+              & svg
+                margin-right: 6px
+                min-width: 60px
+                max-width: 60px
+                min-height: 60px
+                max-height: 60px
+              & label
+                line-height: 120%
+                &:before
+                  margin-right: 6px
+            & .pay-data
+              opacity: 0
+              overflow: hidden
+              & .pay-data__wrapper
+                margin-top: 5px
+              & .pay-data__text
+                padding-left: 34px
+                font-size: 16px
+                line-height: 25px
+                letter-spacing: 0.1px
+                color: #888787
+                //margin-bottom: 10px
+            &.yur_osoba
+              & .pay-data
+                & .pay-data__text
+                  padding-left: 0
+                  margin-bottom: 10px
+          & .btn-submit
+            display: block
+            width: calc(100% - 40px)
+            margin: 0 20px 20px 20px
+            //margin: 0 20px
+
+@media screen and (min-width: 1024px)
+  .cart-wrapper
+    display: grid
+    grid-template-columns: 7fr 5fr
+    align-items: start
+    grid-gap: 0 20px
+    border: none
+    border-radius: 0px
+    box-shadow: none
+    margin-bottom: 65px
+    & .cart-content
+      border: 1px solid #E1E4E8
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+      border-radius: 2px
+      & .item
+        display: grid
+        grid-template-columns: auto 230px
+        grid-template-rows: auto
+        align-items: center
+        grid-gap: 8px 20px
+        & .item-top
+          margin: 0
+          grid-gap: 0 12px
+          & .info
+            display: flex
+            flex-direction: column
+            & .name
+              flex: 1
+              & .prod-name
+                font-size: 16px
+                line-height: 20px
+              & .btn-delete
+                display: none
+            & .old-price_wrap
+              flex: 0
+              & .discount
+                font-size: 12px
+                line-height: 18px
+              & .old-price
+                font-size: 14px
+            & .price
+              flex: 0
+              font-size: 14px
+              line-height: 16px
+              & span
+                font-size: 16px
+          & .img
+            width: 150px
+            height: 150px
+        & .item-bottom
+          display: flex
+          flex-direction: column-reverse
+          gap: 10px 0
+          & .cart-bottom
+            //grid-column: 2/3
+            //grid-row: 1/2
+            justify-content: flex-start
+            & .btn-delete
+              display: block
+              margin: 0 0 0 auto
+              min-width: 28px
+              max-width: 28px
+              min-height: 28px
+              max-height: 28px
+              cursor: pointer
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 20.6542C8 21.6999 8.9 22.5555 10 22.5555H18C19.1 22.5555 20 21.6999 20 20.6542V9.24681H8V20.6542ZM10 11.148H18V20.6542H10V11.148ZM17.5 6.39496L16.5 5.44434H11.5L10.5 6.39496H7V8.29619H21V6.39496H17.5Z' fill='%23C8C8C8'/%3E%3C/svg%3E")
+              transition: all .3s
+              &:hover
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 20.6542C8 21.6999 8.9 22.5555 10 22.5555H18C19.1 22.5555 20 21.6999 20 20.6542V9.24681H8V20.6542ZM10 11.148H18V20.6542H10V11.148ZM17.5 6.39496L16.5 5.44434H11.5L10.5 6.39496H7V8.29619H21V6.39496H17.5Z' fill='%23EB2915'/%3E%3C/svg%3E")
+            & .total-text
+              font-size: 14px
+              line-height: 16px
+              margin-right: 5px
+            & .total-number
+              font-size: 14px
+              line-height: 16px
+              & span
+                font-size: 16px
+          & .cart-calc
+            margin: 0
+            grid-gap: 8px 10px
+            & .counter
+              height: 48px
+              & input
+                font-size: 16px
+            & .measurement
+              & .measurement-select
+                height: 48px
+                line-height: 48px
+                font-size: 16px
+              & .measurement-list
+                top: calc(100% + 5px)
+                & li
+                  font-size: 16px
+            & .measurement-text
+              font-size: 14px
+              & sup
+                font-size: 10px
+    & .cart-res
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+      border-radius: 2px
+      border: 1px solid #E1E4E8
+      & .btns
+        & .btn-border
+          &:hover
+            background-color: inherit
+            color: $light-blue
+
+  .checkout
+    margin-bottom: 36px
+    & .checkout-content
+      display: grid
+      grid-template-columns: minmax(auto, 702px) minmax(auto, 495px)
+      align-items: start
+      grid-gap: 0 20px
+      & .checkout-card
+        & .card-bottom
+          & .card-bottom__wrapper
+            max-width: 480px
+        & .form-group
+          & input
+            padding: 22px 40px 9px 12px
+            font-size: 14px
+          & input[type=text], input[type=textarea]
+            & + label
+              font-size: 16px
+            &:focus
+              & + label
+                top: 8px
+                font-size: 11px
+          &.focus
+            & input[type=text], input[type=textarea]
+              & + label
+                top: 8px
+                font-size: 11px
+          & .help-block
+            margin: 0 0 0 10px
+
+          & .checkbox, & .radio
+            & + label
+              font-size: 16px
+              line-height: 20px
+              cursor: pointer
+          & .checkbox
+            & + label
+              &:before
+                margin-top: 2px
+                width: 18px
+                height: 18px
+
+        &.card-delivery
+          & .card-bottom
+            & .card-bottom__wrapper
+              max-width: 100%
+          & .switcher
+            max-width: 480px
+
+          & .delivery-type
+            max-width: 480px
+            & .delivery-radio
+              & .radio
+                & + label
+                  font-size: 16px
+          & .recipient
+            max-width: 480px
+          & .delivery-comment
+            max-width: 480px
+          & .delivery-info
+            & .delivery-info__wrapper
+              & .item
+                & .delivery-text, .select-wrapper, .form-group, .grid-3, .grid-2
+                  max-width: 440px
+                & .select-wrapper
+                  min-height: 48px
+                  & .select__toggle
+                    height: 48px
+        &.card-payment
+          & .btn-submit
+            display: none!important
+
+        &.card-goods
+          & .card-bottom
+            & .item
+              & .item-top
+                align-items: flex-start
+                & .img
+                  & img
+                    width: 100px
+                    height: 100px
+                & .price-wrapper
+                  display: block
+                  & .old-price_wrap
+                    margin-bottom: 2px
+                    & .discount
+                      font-size: 14px
+                      line-height: 22px
+                    & .old-price
+                      font-size: 14px
+                  & .price
+                    font-size: 14px
+                    & span
+                      font-weight: 700
+                      font-size: 16px
+              & .item-bottom
+                & p
+                  font-size: 16px
+                  & span
+                    & strong
+                      font-size: 20px
+        &.card-cost
+          & .cost-list
+            & .item
+              & p
+                font-size: 16px
+                & span
+                  font-size: 20px
+          & .btn-submit
+            display: block
+            width: 100%
+            margin-bottom: 20px
+      & .right
+        & .checkout-card
+          & .card-bottom
+            & .card-bottom__wrapper
+              max-width: 100%
+
+
+

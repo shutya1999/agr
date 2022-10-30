@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Особистий кабінет - Реєстрація</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cabinet.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="cabinet">
+        <div class="container">
+            <div class="cabinet-login login">
+                <div class="cabinet-login__container">
+                    <div class="cabinet-login__step-wrapper">
+                        <div class="step">
+                            <h2 class="login-title">Вхід до кабінету</h2>
+                            <p class="login-description">
+                                Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                            </p>
+                            <form action="" class="form-login">
+                                <div class="form-group">
+                                    <input id="user-phone" type="text" name="user-phone" class="form-control _js-mask-phone" inputmode="numeric">
+                                    <label for="user-phone">Телефон*</label>
+                                    <div class="help-block">Error</div>
+                                </div>
+                                <button type="submit" class="btn-default btn-submit next-step">реєстрація</button>
+                                <p class="login-bottom-text">Забули пароль?</p>
+                                <a href="" class="login-bottom-text">Зареєструватися</a>
+                            </form>
+                        </div>
+                        <div class="step">
+                            <h2 class="login-title">Вхід до кабінету</h2>
+                            <p class="login-description">
+                                Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні.
+                            </p>
+                            <div class="cabinet-code">
+                                <div class="inputs">
+                                    <input type="text" class="input-code" inputmode="numeric">
+                                    <input type="text" class="input-code" inputmode="numeric">
+                                    <input type="text" class="input-code" inputmode="numeric">
+                                    <input type="text" class="input-code" inputmode="numeric">
+                                </div>
+                                <div class="help-block">
+                                    Введіть код
+                                </div>
+                            </div>
+                            <button type="button" class="btn-default btn-submit btn-send-code">перейти у особистий кабінет</button>
+                            <p class="login-bottom-text">Відправити код ще раз</p>
+                            <a href="" class="login-bottom-text prev-step">Змінити номер</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('_footer.html')
+
+<script src="cdn/js/maskinput.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cabinet.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Готові рішення каталог</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/solution.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Головна</a></li>
+            <li class="breadcrumb-item"><a href="">Готові рішення</a></li>
+            <li class="breadcrumb-item"><a href="">Ванна у класичному стилі</a></li>
+            <li class="breadcrumb-item">Затишна ванна у чорних тонах</li>
+        </ol>
+    </div>
+
+    <div class="container">
+
+        <div class="form-group _select">
+            <select class="_js-select-city custom-select" name="states"></select>
+            <div class="input-prompt">Here can be text about location choice</div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+@@include('_footer.html')
+
+<script src="cdn/js/swiper-bundle.min.js"></script>
+
+
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZsXvHFZ-H396fuAsVBe2ZixVOhNBUxvA" defer></script>
+
+<!--<script async-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZsXvHFZ-H396fuAsVBe2ZixVOhNBUxvA&libraries=geometry,places&callback=initMap">-->
+<!--</script>-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!--<script src="js/map.js"></script>-->
+
+<script>
+    $('._js-select-city').select2({
+        closeOnSelect: false,
+        dropdownCssClass: "select-dropdown",
+        placeholder: "Select a state",
+        data: [
+            { id: 0, text: 'Istanbul', selected: true},
+            { id: 1, text: 'Antalya', selected: true},
+            { id: 2, text: 'Alanya', "disabled": true},
+            { id: 3, text: 'Kapadokya', "disabled": true},
+            { id: 4, text: 'Kyiv', "disabled": true},
+            { id: 4, text: 'London', "disabled": true}
+        ],
+        // templateResult: selectSoon,
+        // templateSelection: formatState,
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Готові рішення каталог</title>
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/comparison.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Головна</a></li>
+            <li class="breadcrumb-item"><a href="">Профіль</a></li>
+            <li class="breadcrumb-item">Порівняння товарів</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="comparison-content">
+            <div class="top">
+                <p class="title">Порівняня</p>
+                <p class="total-goods">Всього 5 товарів</p>
+                <a href="" class="share">Поділитися</a>
+                <div class="btns">
+                    <div class="btn-differences">
+                        <input type="checkbox" id="differences" class="form-control">
+                        <label for="differences">
+                            Показати відмінності
+                            <span></span>
+                        </label>
+                    </div>
+                    <a href="" class="btn-clear">Видалити все</a>
+                </div>
+            </div>
+            <div class="main-slider__wrapper">
+                <div class="sidebar">
+                    <div class="sidebar-top">
+                        <div class="btn-differences">
+                            <input type="checkbox" id="differences-1" class="form-control">
+                            <label for="differences-1">
+                                Показати відмінності
+                                <span></span>
+                            </label>
+                        </div>
+                        <a href="" class="btn-add-goods">додати товари у список</a>
+                    </div>
+                    <div class="sidebar-bottom">
+                        <a href="" class="btn-clear">Видалити все</a>
+                        <a href="" class="btn-share">Поділитися</a>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper main-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>
+                                    <div class="element-control">
+                                        <div class="control-icon" onclick="showControlButton(this);"></div>
+                                        <div class="control-list">
+                                            <a href="" class="control-item">Вдалити</a>
+                                            <span class="control-item">Додадти у вибране</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                            </div>
+                            <div class="btns">
+                                <a href="" class="btn-detail">Деталі</a>
+                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>
+                                    <div class="element-control">
+                                        <div class="control-icon" onclick="showControlButton(this);"></div>
+                                        <div class="control-list">
+                                            <a href="" class="control-item">Вдалити</a>
+                                            <span class="control-item">Додадти у вибране</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                            </div>
+                            <div class="btns">
+                                <a href="" class="btn-detail">Деталі</a>
+                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>
+                                    <div class="element-control">
+                                        <div class="control-icon" onclick="showControlButton(this);"></div>
+                                        <div class="control-list">
+                                            <a href="" class="control-item">Вдалити</a>
+                                            <span class="control-item">Додадти у вибране</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                            </div>
+                            <div class="btns">
+                                <a href="" class="btn-detail">Деталі</a>
+                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>
+                                    <div class="element-control">
+                                        <div class="control-icon" onclick="showControlButton(this);"></div>
+                                        <div class="control-list">
+                                            <a href="" class="control-item">Вдалити</a>
+                                            <span class="control-item">Додадти у вибране</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                            </div>
+                            <div class="btns">
+                                <a href="" class="btn-detail">Деталі</a>
+                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <picture>
+                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                                </picture>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>
+                                    <div class="element-control">
+                                        <div class="control-icon" onclick="showControlButton(this);"></div>
+                                        <div class="control-list">
+                                            <a href="" class="control-item">Вдалити</a>
+                                            <span class="control-item">Додадти у вибране</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="old-price_wrap">
+                                    <span class="discount">-5%</span>
+                                    <span class="old-price">1234.33</span>
+                                </div>
+                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                            </div>
+                            <div class="btns">
+                                <a href="" class="btn-detail">Деталі</a>
+                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-params__wrapper">
+                <div class="param-title">Характеристики товару</div>
+                <div class="sidebar">
+                    <div class="item">
+                        <p>Бренд</p>
+                    </div>
+                    <div class="item">
+                        <p>Колір</p>
+                    </div>
+                    <div class="item">
+                        <p>Форма</p>
+                    </div>
+                    <div class="item">
+                        <p>Призначення</p>
+                    </div>
+                </div>
+                <div class="swiper slider-params">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <p class="param-name">Бренд</p>
+                                <p class="param-res">
+                                    Керамограніт Almera Ceramica
+                                    <a href="">PORCELANOSA</a>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Колір</p>
+                                <p class="param-res">
+                                    Білий
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Форма</p>
+                                <p class="param-res">
+                                    Прямокутна
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Призначення</p>
+                                <p class="param-res">
+                                    для кухні <br>
+                                    для ванної кімнати <br>
+                                    для вхідної зони
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <p class="param-name">Бренд</p>
+                                <p class="param-res">
+                                    Керамограніт
+                                    <a href="">PORCELANOSA</a>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Колір</p>
+                                <p class="param-res">
+                                    Чорний
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Форма</p>
+                                <p class="param-res">
+                                    Квадратна
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Призначення</p>
+                                <p class="param-res">
+                                    для кухні <br>
+                                    для вхідної зони
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <p class="param-name">Бренд</p>
+                                <p class="param-res">
+                                    Керамограніт Almera Ceramica (Spain) Palette 200 Berry
+                                    <a href="">PORCELANOSA</a>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Колір</p>
+                                <p class="param-res">
+                                    Білий
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Форма</p>
+                                <p class="param-res">
+                                    Квадратна
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Призначення</p>
+                                <p class="param-res">
+                                    для кухні <br>
+                                    для ванної кімнати <br>
+                                    для вхідної зони
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <p class="param-name">Бренд</p>
+                                <p class="param-res">
+                                    Керамограніт Almera Ceramica (Spain) Palette 200 Berry
+                                    <a href="">PORCELANOSA</a>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Колір</p>
+                                <p class="param-res">
+                                    Білий
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Форма</p>
+                                <p class="param-res">
+                                    Квадратна
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Призначення</p>
+                                <p class="param-res">
+                                    для кухні <br>
+                                    для ванної кімнати <br>
+                                    для вхідної зони
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <p class="param-name">Бренд</p>
+                                <p class="param-res">
+                                    Керамограніт Almera Ceramica (Spain) Palette 200 Berry
+                                    <a href="">PORCELANOSA</a>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Колір</p>
+                                <p class="param-res">
+                                    Бежевий
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Форма</p>
+                                <p class="param-res">
+                                    Прямокутна
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="param-name">Призначення</p>
+                                <p class="param-res">
+                                    для кухні
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <p class="title">Порівняня</p>-->
+<!--        <div class="comparison-top">-->
+<!--            <p class="total-goods">Всього 5 товарів</p>-->
+<!--            <div class="btns">-->
+<!--                <a href="" class="add-more">додати товар у список</a>-->
+<!--                <a href="" class="share">Поділитися</a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="comparison-slider__wrapper">-->
+<!--            <div class="swiper comparison-slider">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="top">-->
+<!--                            <div class="img">-->
+<!--                                <picture>-->
+<!--                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">-->
+<!--                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">-->
+<!--                                </picture>-->
+<!--                            </div>-->
+<!--                            <div class="info">-->
+<!--                                <div class="name">-->
+<!--                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>-->
+<!--                                    <div class="element-control">-->
+<!--                                        <div class="control-icon" onclick="showControlButton(this);"></div>-->
+<!--                                        <div class="control-list">-->
+<!--                                            <a href="" class="control-item">Вдалити</a>-->
+<!--                                            <span class="control-item">Додадти у вибране</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="old-price_wrap">-->
+<!--                                    <span class="discount">-5%</span>-->
+<!--                                    <span class="old-price">1234.33</span>-->
+<!--                                </div>-->
+<!--                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>-->
+<!--                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>-->
+<!--                            </div>-->
+<!--                            <div class="btns">-->
+<!--                                <a href="" class="btn-detail">Деталі</a>-->
+<!--                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="comparison-filters">-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Бренд</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="top">-->
+<!--                            <div class="img">-->
+<!--                                <picture>-->
+<!--                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">-->
+<!--                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">-->
+<!--                                </picture>-->
+<!--                            </div>-->
+<!--                            <div class="info">-->
+<!--                                <div class="name">-->
+<!--                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>-->
+<!--                                    <div class="element-control">-->
+<!--                                        <div class="control-icon" onclick="showControlButton(this);"></div>-->
+<!--                                        <div class="control-list">-->
+<!--                                            <a href="" class="control-item">Вдалити</a>-->
+<!--                                            <span class="control-item">Додадти у вибране</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="old-price_wrap">-->
+<!--                                    <span class="discount">-5%</span>-->
+<!--                                    <span class="old-price">1234.33</span>-->
+<!--                                </div>-->
+<!--                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>-->
+<!--                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>-->
+<!--                            </div>-->
+<!--                            <div class="btns">-->
+<!--                                <a href="" class="btn-detail">Деталі</a>-->
+<!--                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="comparison-filters">-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Бренд</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="top">-->
+<!--                            <div class="img">-->
+<!--                                <picture>-->
+<!--                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">-->
+<!--                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">-->
+<!--                                </picture>-->
+<!--                            </div>-->
+<!--                            <div class="info">-->
+<!--                                <div class="name">-->
+<!--                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>-->
+<!--                                    <div class="element-control">-->
+<!--                                        <div class="control-icon" onclick="showControlButton(this);"></div>-->
+<!--                                        <div class="control-list">-->
+<!--                                            <a href="" class="control-item">Вдалити</a>-->
+<!--                                            <span class="control-item">Додадти у вибране</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="old-price_wrap">-->
+<!--                                    <span class="discount">-5%</span>-->
+<!--                                    <span class="old-price">1234.33</span>-->
+<!--                                </div>-->
+<!--                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>-->
+<!--                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>-->
+<!--                            </div>-->
+<!--                            <div class="btns">-->
+<!--                                <a href="" class="btn-detail">Деталі</a>-->
+<!--                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="comparison-filters">-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Бренд</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="top">-->
+<!--                            <div class="img">-->
+<!--                                <picture>-->
+<!--                                    <source srcset="img/catalog/popular-filter.webp" type="image/webp">-->
+<!--                                    <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">-->
+<!--                                </picture>-->
+<!--                            </div>-->
+<!--                            <div class="info">-->
+<!--                                <div class="name">-->
+<!--                                    <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Recе</a>-->
+<!--                                    <div class="element-control">-->
+<!--                                        <div class="control-icon" onclick="showControlButton(this);"></div>-->
+<!--                                        <div class="control-list">-->
+<!--                                            <a href="" class="control-item">Вдалити</a>-->
+<!--                                            <span class="control-item">Додадти у вибране</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="old-price_wrap">-->
+<!--                                    <span class="discount">-5%</span>-->
+<!--                                    <span class="old-price">1234.33</span>-->
+<!--                                </div>-->
+<!--                                <div class="price _color-red"><span>1 172.30</span> грн / шт</div>-->
+<!--                                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>-->
+<!--                            </div>-->
+<!--                            <div class="btns">-->
+<!--                                <a href="" class="btn-detail">Деталі</a>-->
+<!--                                <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="comparison-filters">-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Бренд</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                            <div class="characteristics-item">-->
+<!--                                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                                <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                                <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="arrow-wrapper">-->
+<!--                    <div class="slider-arrow arrow-left"></div>-->
+<!--                    <div class="slider-arrow arrow-right"></div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="swiper-scrollbar"></div>-->
+<!--        </div>-->
+
+
+<!--        <div class="compare-characteristics__mob">-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Бренд</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text"><a href="">PORCELANOSA</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 2</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 3</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 2</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 3</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 2</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 3</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 2</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 3</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="characteristics-item">-->
+<!--                <p class="compare-characteristics__name">Назва характеристики</p>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 1</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 1</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 2</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 2</p>-->
+<!--                </div>-->
+<!--                <div class="prod-item">-->
+<!--                    <p class="compare-characteristics__prod-name">Керамограніт Almera Ceramica (Spain) Palette 200 Berry - 3</p>-->
+<!--                    <p class="compare-characteristics__text">Назва характеристики - 3</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+    </div>
+
+<!--    @@include('_goods-slider.html', {-->
+<!--        "section_name": "Топ-продажу"-->
+<!--    })-->
+
+<!--    <div class="container">-->
+<!--        <div class="seo-text _mb js-parent">-->
+<!--            <h1 class="title">СEO текст</h1>-->
+<!--            <p>-->
+<!--                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині,-->
+<!--                яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому,-->
+<!--                що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад,-->
+<!--                "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм-->
+<!--                верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном-->
+<!--                "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.-->
+<!--                Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно-->
+<!--                (зокрема, жартівливі)-->
+<!--                <span class="_hide-content js-hidden__content">-->
+<!--                  Тут іде текст." Це робить текст схожим на оповідний. Багато програм-->
+<!--                  верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном-->
+<!--                  "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані.-->
+<!--                  Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно (зокрема, жартівливі)-->
+<!--                </span>-->
+<!--            <div class="btn-seo js-hidden-btn" data-hide="Показати менше">Показати більше</div>-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</div>
+
+
+
+@@include('_footer.html')
+
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,965 @@
+$black: #303437
+$dark-blue: #004B91
+$light-blue: #2362CB
+$red: #EB2915
+$yellow: #F1C40F
+$green: #16A352
+
+@mixin bg-center
+  background-position: center
+  background-repeat: no-repeat
+  @content
+
+
+.review-star
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  & .review-star__grey
+    margin: 0 8px
+    background-size: 22px 20px
+    height: 20px
+    width: 110px
+    background-image: url("data:image/svg+xml;charset=utf,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3987 1.3484C11.2881 1.13506 11.06 1 10.8102 1C10.5604 1 10.3323 1.13506 10.2217 1.3484L7.54568 6.51242L1.5619 7.34051C1.3147 7.37472 1.10933 7.53962 1.03214 7.76587C0.954947 7.99213 1.01932 8.24051 1.1982 8.40656L5.5281 12.4262L4.50595 18.102C4.46372 18.3365 4.56493 18.5735 4.76702 18.7133C4.96911 18.8531 5.23703 18.8716 5.45813 18.7609L10.8102 16.0811L16.1622 18.7609C16.3833 18.8716 16.6513 18.8531 16.8534 18.7133C17.0554 18.5735 17.1567 18.3365 17.1144 18.102L16.0923 12.4262L20.4222 8.40656C20.601 8.24051 20.6654 7.99213 20.5882 7.76587C20.511 7.53962 20.3057 7.37472 20.0585 7.34051L14.0747 6.51242L11.3987 1.3484Z' fill='%23c8c8c8'/%3E%3C/svg%3E")
+    background-repeat: repeat-x
+    & .review-star__count
+      display: block
+      height: 100%
+      background-size: 22px 20px
+      background-image: url("data:image/svg+xml;charset=utf,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3987 1.3484C11.2881 1.13506 11.06 1 10.8102 1C10.5604 1 10.3323 1.13506 10.2217 1.3484L7.54568 6.51242L1.5619 7.34051C1.3147 7.37472 1.10933 7.53962 1.03214 7.76587C0.954947 7.99213 1.01932 8.24051 1.1982 8.40656L5.5281 12.4262L4.50595 18.102C4.46372 18.3365 4.56493 18.5735 4.76702 18.7133C4.96911 18.8531 5.23703 18.8716 5.45813 18.7609L10.8102 16.0811L16.1622 18.7609C16.3833 18.8716 16.6513 18.8531 16.8534 18.7133C17.0554 18.5735 17.1567 18.3365 17.1144 18.102L16.0923 12.4262L20.4222 8.40656C20.601 8.24051 20.6654 7.99213 20.5882 7.76587C20.511 7.53962 20.3057 7.37472 20.0585 7.34051L14.0747 6.51242L11.3987 1.3484Z' fill='%23FFD02B'/%3E%3C/svg%3E")
+  & .review-star__number
+    font-size: 18px
+    line-height: 150%
+    color: $black
+  & .review__link
+    color: $light-blue
+    text-decoration: underline
+    transition: color .3s
+    &:hover
+      color: $black
+
+.product-main
+  position: relative
+  padding-top: 32px
+  margin-bottom: 50px
+.slider-thumb
+  display: none
+.main-slider
+  margin-bottom: 12px
+  & .arrow-wrapper
+    display: none
+  & .swiper-slide
+    width: 100%
+    padding-bottom: 100%
+    position: relative
+    & img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      object-fit: cover
+  & .goods-label
+    position: absolute
+    top: 10px
+    left: 10px
+    z-index: 2
+
+  .swiper-pagination
+    position: relative
+    left: auto
+    bottom: auto
+    margin-top: 12px
+    & .swiper-pagination-bullet
+      background: #C8C8C8
+      &.swiper-pagination-bullet-active
+        background: #888787
+
+
+.product-info
+  & .control-buttons
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    & .control-buttons__right
+      display: flex
+      align-items: center
+    & .share
+      width: 24px
+      height: 24px
+      margin-right: 15px
+      cursor: pointer
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.35C15.11 18.56 15.08 18.78 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z' fill='%23888787'/%3E%3C/svg%3E")
+      @include bg-center
+        background-size: contain
+  & .name
+    margin-bottom: 12px
+  & .price
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0
+    & span
+      font-size: 20px
+      font-weight: 600
+  & .cart-goods-alert
+    font-size: 16px
+    line-height: 17px
+    margin-top: 6px
+
+  & .brief-characteristics
+    margin-top: 20px
+    & .brief-characteristics__item
+      font-weight: 600
+      font-size: 18px
+      line-height: 150%
+      color: $black
+      margin-bottom: 8px
+      &:last-child
+        margin-bottom: 0
+      & span
+        font-weight: 400
+        color: $black
+      & a
+        color: $light-blue
+        text-decoration: underline
+        transition: color .3s
+        &:hover
+          color: $black
+      & img
+        max-width: 70px
+        & img
+          max-width: 100%
+      &._review
+        display: flex
+        align-items: center
+        & .review-star
+          margin-left: 8px
+
+  & .title-info
+    margin-bottom: 15px
+    & p
+      display: inline-block
+      font-weight: 600
+      font-size: 20px
+      line-height: 120%
+    &.title-prompt
+      display: flex
+      align-items: center
+      & .prompt
+        margin-left: 6px
+        & .prompt-icon
+          width: 24px
+          height: 24px
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 7.5H13V9.5H11V7.5ZM11 11.5H13V17.5H11V11.5ZM12 2.5C6.48 2.5 2 6.98 2 12.5C2 18.02 6.48 22.5 12 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 12 2.5ZM12 20.5C7.59 20.5 4 16.91 4 12.5C4 8.09 7.59 4.5 12 4.5C16.41 4.5 20 8.09 20 12.5C20 16.91 16.41 20.5 12 20.5Z' fill='%23C8C8C8'/%3E%3C/svg%3E")
+        & .prompt-content
+          right: -14px
+          z-index: 2
+          &._right
+            right: auto
+            left: -14px
+            &:before
+              right: auto
+              left: 20px
+
+.product-filters
+  margin: 30px 0
+  & .item
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+    & .filter-name
+      display: flex
+      align-items: center
+      margin-bottom: 15px
+      &:after
+        content: ''
+        width: 24px
+        height: 24px
+        margin-left: 6px
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 7.5H13V9.5H11V7.5ZM11 11.5H13V17.5H11V11.5ZM12 2.5C6.48 2.5 2 6.98 2 12.5C2 18.02 6.48 22.5 12 22.5C17.52 22.5 22 18.02 22 12.5C22 6.98 17.52 2.5 12 2.5ZM12 20.5C7.59 20.5 4 16.91 4 12.5C4 8.09 7.59 4.5 12 4.5C16.41 4.5 20 8.09 20 12.5C20 16.91 16.41 20.5 12 20.5Z' fill='%23C8C8C8'/%3E%3C/svg%3E")
+        @include bg-center
+          background-size: contain
+
+    & .filter-desc
+      margin-bottom: 20px
+    & .content
+      & .form-group
+        display: flex
+        align-items: center
+        margin-bottom: 13px
+        min-height: 58px
+        & label
+          display: block
+          width: 100%
+          font-size: 16px
+          line-height: 25px
+          padding: 12px 12px 12px 44px
+          position: relative
+          border: 1px solid #E1E4E8
+          border-radius: 2px
+          &:before
+            position: absolute
+            top: 12px
+            left: 12px
+            width: 24px
+            height: 24px
+          & span
+            display: block
+            font-size: 18px
+            line-height: 150.5%
+            color: #888787
+            margin-top: 8px
+        &:last-child
+          margin-bottom: 0
+        & .icon-color
+          position: absolute
+          top: 50%
+          right: 12px
+          transform: translateY(-50%)
+          width: 20px
+          height: 20px
+          border-radius: 50%
+        & .radio
+          &:checked
+            & + label
+              border-color: $light-blue
+              background: rgba(35, 98, 203, 0.04)
+    &.product-filters__color
+      & .selected-color
+        font-size: 16px
+        font-weight: 600
+        margin-bottom: 10px
+        & span
+          font-weight: 400
+      & .content
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 10px
+        & .form-group
+          min-height: auto
+          margin: 0
+          padding-bottom: 100%
+          cursor: pointer
+          & label
+            position: absolute
+            top: 0
+            left: 0
+            padding: 4px
+            background: none
+            border-radius: 0px
+            width: 100%
+            height: 100%
+            cursor: pointer
+            & picture
+              width: 100%
+              height: 100%
+              display: flex
+              justify-content: center
+              align-items: center
+            & img
+              width: 100%
+              height: 100%
+              object-fit: cover
+              max-width: 100%
+              border-radius: 2px
+            &:before
+              display: none
+          & input
+            &:checked
+              & + label
+                background: none
+.quantity
+  margin-bottom: 30px
+  & .cart-calc
+    display: grid
+    grid-template-columns: auto 85px
+    grid-template-rows: repeat(2, auto)
+    grid-gap: 12px 20px
+    & .counter
+      & input
+        font-size: 20px
+      & .btn-count
+        &.btn-decrement:before
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 14V13H18V14H7Z' fill='%23303437'/%3E%3C/svg%3E")
+        &.btn-increment:before
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 12.3519V13.6481H13.7655V18H12.2671V13.6481H8V12.3519H12.2671V8H13.7655V12.3519H18Z' fill='%23303437'/%3E%3C/svg%3E")
+
+    & .measurement
+      display: block
+      & .measurement-select
+        font-size: 18px
+      & .measurement-list
+        & li
+          font-size: 18px
+    & .measurement-text
+      color: #646464
+
+
+.availability
+  padding-bottom: 20px
+  border-radius: 2px
+  border: 1px solid #E1E4E8
+  box-sizing: border-box
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+  margin-bottom: 50px
+  & .top
+    font-weight: 600
+    font-size: 20px
+    line-height: 120%
+    display: flex
+    justify-content: space-between
+    padding: 20px 20px 0 20px
+    &:after
+      content: ''
+      width: 24px
+      height: 24px
+      transition: transform .5s
+      transform: rotate(180deg)
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.355 15.645L12 10.3017L6.645 15.645L5 14L12 7.00002L19 14L17.355 15.645Z' fill='%23888787'/%3E%3C/svg%3E")
+      @include bg-center
+        background-size: contain
+  & .content
+    display: none
+    padding: 15px 20px 0 15px
+    & .shop-list
+      margin-top: 20px
+      list-style: none
+      & li
+        margin-bottom: 20px
+        & a
+          display: inline-block
+          font-weight: 600
+          font-size: 18px
+          line-height: 150%
+          color: $light-blue
+          margin-bottom: 2px
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            bottom: 3px
+            left: 0
+            width: 100%
+            height: 1px
+            background: $light-blue
+        & span
+          display: block
+          font-size: 16px
+          line-height: 150%
+        &:last-child
+          margin-bottom: 0
+  &.active
+    & .top
+      &:after
+        transform: rotate(0deg)
+    & .content
+      display: block
+
+.prod-calc
+  margin-bottom: 30px
+  & .content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 15px 20px
+    & .form-group
+      margin-bottom: 0
+    & .calc-res
+      display: flex
+      align-items: center
+      justify-content: flex-end
+
+
+.description
+  padding: 20px
+  border: 1px solid #E1E4E8
+  border-radius: 2px
+  margin-bottom: 50px
+  & p
+    font-size: 16px
+    line-height: 25px
+  & .btn-desc
+    margin-top: 15px
+    font-weight: 600
+    font-size: 16px
+    line-height: 120%
+    color: $light-blue
+    text-transform: uppercase
+
+
+.characteristic
+  & .labels
+    display: flex
+  & .label
+    display: block
+    font-weight: 500
+    padding: 17px 20px
+    border-bottom: 3px solid #CFD4DA
+    font-size: 18px
+    line-height: 120%
+    cursor: pointer
+    transition: all .4s
+    &:hover
+      color: $light-blue
+    &.active
+      color: $light-blue
+      background: rgba(39, 104, 213, 0.11)
+      border-radius: 4px 4px 0px 0px
+      border-color: $light-blue
+  & .content
+    & .list
+      display: none
+      &.active
+        display: block
+      & .item
+        display: flex
+        justify-content: space-between
+        padding: 14px 0
+        border-bottom: 1px solid #E1E4E8
+        & .left
+          font-size: 18px
+          line-height: 120%
+          color: #888787
+        & .right
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+        & span, & a, & p
+          font-size: 18px
+          line-height: 25px
+        & a
+          font-weight: 600
+          color: $light-blue
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 2px
+            width: 100%
+            height: 2px
+            background: $light-blue
+    & .text
+      display: none
+      &.active
+        display: block
+      & .btn-seo
+        background: none
+        outline: none
+        border: none
+        //&:before, &:after
+        //  top: 10px
+  & .btn-characteristic
+    //text-transform: uppercase
+    //font-weight: 600
+    //font-size: 16px
+    //color: $light-blue
+    //line-height: 58px
+    //margin: 8px 0 0 10px
+
+
+
+.reviews
+  & .title
+    margin-bottom: 15px
+  & .statistics
+    margin-bottom: 30px
+    & .item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      & .stat-star
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 35px
+        & span
+          font-size: 16px
+          line-height: 25px
+      & .line
+        height: 10px
+        border-radius: 20px
+        background: #C8C8C8
+        margin: 0 8px
+        flex: 1
+        position: relative
+        & span
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          border-radius: 20px
+          width: 40%
+          background: $light-blue
+
+      & .percent
+        font-size: 16px
+        line-height: 25px
+        width: 41px
+        text-align: end
+
+  & .info-item
+    display: flex
+    margin-bottom: 8px
+    & p
+      font-size: 18px
+      line-height: 25px
+      margin-right: 8px
+      white-space: nowrap
+    & a
+      font-size: 18px
+      line-height: 25px
+      color: $light-blue
+      text-decoration: underline
+
+  & .btn-write-review
+    margin: 20px 0 50px 0
+
+
+  & .review-sort-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 15px
+    & .select
+      max-width: 230px
+
+  & .reviews-content
+    margin-bottom: 30px
+    & .item
+      border: 1px solid #E1E4E8
+      box-sizing: border-box
+      border-radius: 2px
+      padding: 20px
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+      & .review-star__grey
+        margin: 0 0 15px 0
+      & .user-info
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 15px
+      & .user-name
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        display: flex
+        align-items: center
+        margin-right: 6px
+        &:after
+          display: block
+          content: ''
+          width: 3px
+          height: 3px
+          border-radius: 50%
+          background: $black
+          margin-left: 6px
+      & .date
+        display: inline
+        font-size: 16px
+        line-height: 20px
+
+      & .review-text
+        margin-bottom: 15px
+
+      & .review-essentials
+        margin-bottom: 15px
+        & .essentials-title
+          font-weight: 600
+          display: inline-block
+
+      & .review-votes
+        display: flex
+        & .like, & .dislike
+          font-weight: 400
+          font-size: 14px
+          line-height: 20px
+          position: relative
+          display: flex
+          align-items: center
+          cursor: pointer
+          &:before
+            content: ''
+            width: 20px
+            height: 20px
+            margin-right: 6px
+            @include bg-center
+              background-size: contain
+        & .like
+          margin-right: 15px
+          &:before
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.16634 7.50004V17.5H0.833008V7.50004H4.16634ZM7.49967 17.5C7.05765 17.5 6.63372 17.3244 6.32116 17.0119C6.0086 16.6993 5.83301 16.2754 5.83301 15.8334V7.50004C5.83301 7.04171 6.01634 6.62504 6.32467 6.32504L11.808 0.833374L12.6913 1.71671C12.9163 1.94171 13.058 2.25004 13.058 2.59171L13.033 2.85837L12.2413 6.66671H17.4997C18.4247 6.66671 19.1663 7.41671 19.1663 8.33337V10C19.1663 10.2167 19.1247 10.4167 19.0497 10.6084L16.533 16.4834C16.283 17.0834 15.6913 17.5 14.9997 17.5H7.49967ZM7.49967 15.8334H15.0247L17.4997 10V8.33337H10.1747L11.1163 3.90004L7.49967 7.52504V15.8334Z' fill='%23888787'/%3E%3C/svg%3E")
+          &.active
+            &:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.1673 8.33301C19.1673 7.40801 18.4173 6.66634 17.5006 6.66634H12.234L13.034 2.85801C13.0507 2.77467 13.059 2.68301 13.059 2.59134C13.059 2.24967 12.9173 1.93301 12.6923 1.70801L11.809 0.833008L6.32565 6.31634C6.01732 6.62467 5.83398 7.04134 5.83398 7.49967V15.833C5.83398 16.275 6.00958 16.699 6.32214 17.0115C6.6347 17.3241 7.05862 17.4997 7.50065 17.4997H15.0006C15.6923 17.4997 16.284 17.083 16.534 16.483L19.0506 10.608C19.1257 10.4163 19.1673 10.2163 19.1673 9.99967V8.33301ZM0.833984 17.4997H4.16732V7.49967H0.833984V17.4997Z' fill='%232362CB'/%3E%3C/svg%3E")
+        & .dislike
+          &:before
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9521 11.9048V1.90479H19.2855V11.9048H15.9521ZM12.6188 1.90479C13.0608 1.90479 13.4848 2.08038 13.7973 2.39294C14.1099 2.7055 14.2855 3.12942 14.2855 3.57145V11.9048C14.2855 12.3631 14.1021 12.7798 13.7938 13.0798L8.31048 18.5715L7.42715 17.6881C7.20215 17.4631 7.06048 17.1548 7.06048 16.8048L7.08548 16.5465L7.87715 12.7381H2.61882C1.69382 12.7381 0.952148 11.9881 0.952148 11.0715V9.40479C0.952148 9.18812 0.993815 8.98812 1.06882 8.79645L3.58548 2.92145C3.83548 2.32145 4.42715 1.90479 5.11882 1.90479H12.6188ZM12.6188 3.57145H5.09382L2.61882 9.40479V11.0715H9.93548L8.99382 15.5048L12.6188 11.8798V3.57145Z' fill='%23888787'/%3E%3C/svg%3E")
+          &.active
+            &:before
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9521 1.90479V11.9048H19.2855V1.90479H15.9521Z' fill='%23303437'/%3E%3Cpath d='M13.7973 2.39294C13.4848 2.08038 13.0608 1.90479 12.6188 1.90479H5.11882C4.42715 1.90479 3.83548 2.32145 3.58548 2.92145L1.06882 8.79645C0.993815 8.98812 0.952148 9.18812 0.952148 9.40479V11.0715C0.952148 11.9881 1.69382 12.7381 2.61882 12.7381H7.87715L7.08548 16.5465L7.06048 16.8048C7.06048 17.1548 7.20215 17.4631 7.42715 17.6881L8.31048 18.5715L13.7938 13.0798C14.1021 12.7798 14.2855 12.3631 14.2855 11.9048V3.57145C14.2855 3.12942 14.1099 2.7055 13.7973 2.39294Z' fill='%23303437'/%3E%3C/svg%3E")
+
+      & .answer
+        margin: 10px 0 0 45px
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          left: -21px
+          width: 2px
+          height: calc(100% - 10px)
+          background: $light-blue
+        & .shop-info
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          padding: 10px 0 15px 0
+          & .icon
+            display: flex
+            max-width: 35px
+            margin-right: 6px
+            & img
+              max-width: 100%
+          & .shop-name
+            display: flex
+            align-items: center
+            font-weight: 600
+            margin-right: 6px
+            &:after
+              display: block
+              content: ''
+              width: 3px
+              height: 3px
+              border-radius: 50%
+              background: $black
+              margin-left: 6px
+          & .shop-date
+            font-size: 16px
+        & .answer-text
+          margin-bottom: 15px
+
+  & .pagination
+    margin-bottom: 40px
+
+.popup-review
+  padding: 40px 20px
+  width: calc(100% - 40px)
+  max-width: 440px
+  & textarea
+    height: 220px
+  & .btn-default
+    width: 100%
+  & .rating
+    margin-bottom: 20px
+
+.product-header
+  display: none
+  position: fixed
+  top: 72px
+  left: 0
+  width: 100%
+  height: 65px
+  background: white
+  z-index: 3
+  //box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12)
+  opacity: 0
+  pointer-events: none
+  transition: all .4s
+  &.active
+    opacity: 1
+    pointer-events: visible
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12)
+  & .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+  & .left
+    font-weight: 600
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.15px
+  & .right
+    display: flex
+    align-items: center
+    & .price
+      margin-right: 20px
+      & .old-price_wrap
+        margin-bottom: 6px
+        & .discount
+          line-height: 21px
+          padding: 0 2px
+      & .price-header
+        font-size: 16px
+        line-height: 21px
+        letter-spacing: 0.15px
+        & span
+          font-weight: 600
+          font-size: 18px
+    & .btn-cart-goods
+      padding: 0 53px
+      margin: 0 30px 0 0
+      height: 48px
+      transition: all .2s
+      cursor: pointer
+      &:hover
+        background: #2362cb
+    & .control-buttons
+      flex-direction: row-reverse
+      & .like
+        margin-right: 12px
+@media screen and (min-width: 768px)
+  .product-main
+    display: grid
+    grid-template-columns: minmax(100px, 500px) minmax(100px, 1fr)
+    grid-gap: 0 20px
+    padding-top: 0
+
+  .product-images
+    width: 100%
+  .product-info
+    & .control-buttons
+      position: relative
+      top: auto
+      left: auto
+      margin-bottom: 12px
+
+  .main-slider
+    margin-bottom: 10px
+    & .swiper-pagination
+      display: none
+    & .arrow-wrapper
+      display: block
+    & .slider-arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 2
+      &.arrow-left
+        left: 20px
+      &.arrow-right
+        right: 20px
+        transform: translateY(-50%) rotate(180deg)
+  .slider-thumb
+    display: block
+    user-select: none
+    cursor: pointer
+    & .swiper-slide
+      //width: 100%
+      & .img
+        padding-bottom: 100%
+        position: relative
+        border: 2px solid rgba(0,0,0,0)
+        border-radius: 2px
+        transition: all .3s
+        & img
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 100%
+          height: 100%
+          object-fit: cover
+          border-radius: 2px
+      &.swiper-slide-thumb-active
+        & .img
+          border-color: $light-blue
+
+    & .swiper-scrollbar
+      position: relative
+      left: auto
+      bottom: auto
+      margin-top: 20px
+      height: 9px
+      background: #F1F1F1
+      border-radius: 0
+      width: 100%
+      & .swiper-scrollbar-drag
+        border: 1px solid #F1F1F1
+        background: #C1C1C1
+
+
+@media screen and (min-width: 1024px)
+  .product-main
+    margin-bottom: 60px
+  .main-slider
+    margin-bottom: 20px
+    & .goods-label
+      top: 15px
+      left: 15px
+      padding: 0 12px
+      & span
+        font-size: 16px
+        line-height: 32px
+
+  .product-info
+    & .name
+      font-size: 24px
+      line-height: 32px
+    & .price
+      & span
+        font-weight: 700
+    & .brief-characteristics
+      & .brief-characteristics__item
+        font-size: 16px
+
+  .product-filters
+    & .item
+      & .content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 12px 20px
+        & .form-group
+          margin: 0
+          min-height: 48px
+          & label
+            padding: 10px 12px 10px 44px
+            &:before
+              top: 11px
+            & span
+              font-size: 16px
+              line-height: 25px
+      &.product-filters__color
+        & .selected-color
+          font-size: 16px
+          margin-bottom: 15px
+        & .content
+          grid-template-columns: repeat(auto-fill, minmax(100px, 128px))
+  .quantity
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    grid-template-rows: repeat(2, auto)
+    & .title-info
+      grid-column: 1/-1
+      grid-row: 1/2
+    & .cart-calc
+      margin-right: 15px
+      & .counter
+        height: 48px
+      & .measurement
+        & .measurement-select
+          height: 48px
+          line-height: 48px
+      & .measurement-text
+        line-height: 16px
+    & .btn-cart-goods
+      margin: 0
+      min-width: 185px
+      height: 48px
+      cursor: pointer
+      transition: all .2s
+      & span
+        font-size: 14px
+      &:hover
+        background: $light-blue
+
+  .availability
+    box-shadow: none
+    margin-bottom: 30px
+    & .content
+      display: block!important
+    & .top
+      pointer-events: none
+      &:after
+        display: none
+
+  .prod-calc
+    & .content
+      grid-gap: 12px 20px
+
+  .description
+    margin-bottom: 30px
+    & .btn-desc
+      cursor: pointer
+      font-size: 14px
+
+
+  .characteristic
+    & .label
+      font-size: 18px
+      font-weight: 600
+    & .content
+      margin-top: 8px
+      & .list
+        & .item
+          padding: 8px 0
+          & a, & p, & span
+            font-size: 16px!important
+    & .btn-characteristic
+      //font-size: 14px
+      //line-height: 48px
+      //cursor: pointer
+
+
+  .goods
+    & .title
+      font-size: 28px!important
+  .review-star
+    & .review-star__number
+      font-size: 16px
+  .reviews
+    position: relative
+    & .title
+      font-size: 28px
+      line-height: 32px
+    & .statistics
+      position: absolute
+      top: 0
+      right: 0
+      width: 270px
+    & .info-item
+      padding-right: 300px
+      & p, & a
+        font-size: 16px
+    & .btn-write-review
+      max-width: 220px
+      font-size: 14px
+      line-height: 48px
+      margin: 15px 0 20px 0
+
+    & .review-sort-block
+      & p
+        font-weight: 600
+        font-size: 20px
+        line-height: 28px
+      & .select
+        & .select__toggle
+          height: 48px
+          & label
+            font-size: 14px
+        & .select__option
+          font-size: 14px
+          line-height: 20px
+        &.select_show
+          & .select__toggle
+            & label
+              font-size: 12px
+    & .reviews-content
+      & .item
+        margin-bottom: 15px
+        & .user-name
+          font-size: 16px
+        & .date
+          font-size: 14px
+
+        & .answer
+          margin-left: 64px
+          &:before
+            height: 100%
+            left: -15px
+          & .shop-info
+            padding-top: 0
+            & .shop-date
+              font-size: 14px
+
+
+@media screen and (min-width: 1200px)
+  .product-images__wrapper
+    position: sticky
+    transition: all .3s
+  .product-header
+    display: block

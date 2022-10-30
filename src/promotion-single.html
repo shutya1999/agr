@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Акція Комплекту</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/other.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Головна</a></li>
+            <li class="breadcrumb-item">Акція Комплекту</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="promotion-single">
+            <div class="swiper slider-promotion">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/0.webp" type="image/webp">
+                            <img src="img/prod/0.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/1.webp" type="image/webp">
+                            <img src="img/prod/1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/2.webp" type="image/webp">
+                            <img src="img/prod/2.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/3.webp" type="image/webp">
+                            <img src="img/prod/3.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/3.webp" type="image/webp">
+                            <img src="img/prod/3.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/0.webp" type="image/webp">
+                            <img src="img/prod/0.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/1.webp" type="image/webp">
+                            <img src="img/prod/1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/2.webp" type="image/webp">
+                            <img src="img/prod/2.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/3.webp" type="image/webp">
+                            <img src="img/prod/3.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/prod/3.webp" type="image/webp">
+                            <img src="img/prod/3.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="goods-label discount">
+                    <span>Акція</span>
+                </div>
+                <div class="arrow-wrapper">
+                    <div class="slider-arrow arrow-left"></div>
+                    <div class="slider-arrow arrow-right"></div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="control-buttons">
+                    <div class="compare _js-compare" onclick="compare(this);">
+                        <p>Порівняти</p>
+                    </div>
+                    <div class="control-buttons__right">
+                        <div class="share"></div>
+                        <div class="like _js-like" onclick="like(this)"></div>
+                    </div>
+                </div>
+                <h3 class="h3 name">Інсталяція для унітазу Geberit Duofix 458.126.00.1 +
+                    Унітаз підвісний Devit Up 3020120 Clean Pro c кришкою soft-close quick-fix</h3>
+                <div class="old-price_wrap">
+                    <span class="discount">-50%</span>
+                    <span class="old-price">1234.33</span>
+                </div>
+                <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                <div class="cart-goods-alert _color-red colon">Мінімальна кількість</div>
+                <div class="quantity">
+                    <div class="title-info">
+                        <p>Кількість</p>
+                    </div>
+                    <div class="cart-calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)"
+                                 onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)"
+                                 ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)"
+                                 onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)"
+                                 ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+
+                    <div class="btn-cart-goods" data-add="Додано" onclick="addCart(this)"><span>У кошик</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability js-accordion-item active">
+            <div class="top js-accordion-trigger">Наявність у магазинах</div>
+            <div class="content">
+                <div class="select" id="select_city-shop">
+                    <div class="select__toggle">
+                        <label>Місто</label>
+                        <button type="button" name="sorting" value="" data-type="button" data-select="toggle"
+                                data-index="-1"></button>
+                    </div>
+
+                    <div class="select__dropdown">
+                        <ul class="select__options">
+                            <li class="select__option" data-select="option" data-value="kyiv" data-index="0">
+                                Київ
+                            </li>
+                            <li class="select__option" data-select="option" data-value="harkiv" data-index="1">
+                                Харків
+                            </li>
+                            <li class="select__option" data-select="option" data-value="mariupol"
+                                data-index="2">Маріуполь
+                            </li>
+                            <li class="select__option" data-select="option" data-value="lviv" data-index="3">
+                                Львів
+                            </li>
+                            <li class="select__option" data-select="option" data-value="odesa" data-index="4">
+                                Одеса
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="shop-list">
+                    <li>
+                        <a href="">Агромат А</a>
+                        <span>вул. Академіка Булаховського, 4</span>
+                    </li>
+                    <li>
+                        <a href="">Агромат А</a>
+                        <span>вул. Академіка Булаховського, 4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="composition">
+            <h3 class="composition-title">
+                Комплект складається
+            </h3>
+            <div class="list">
+                <div class="item">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/other/composition-1.webp" type="image/webp">
+                            <img src="img/other/composition-1.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="params">
+                        <div class="control-buttons">
+                            <div class="compare _js-compare" onclick="compare(this);">
+                                <p>Порівняти</p>
+                            </div>
+                            <div class="control-buttons__right">
+                                <div class="share"></div>
+                                <div class="like _js-like" onclick="like(this)"></div>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <p class="name">Інсталяція для унітазу Geberit Duofix 458.126.00.1 Комплект (3в1)</p>
+                            <div class="characteristics">
+                                <p>Хараткристика 1</p>
+                                <p>Хараткристика 2</p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="price"><span>11 234,00</span> грн / шт</div>
+                            <div class="alert _color-green colon">В наявності</div>
+                        </div>
+                    </div>
+                    <div class="calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)"
+                                 onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)"
+                                 ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)"
+                                 onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)"
+                                 ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/other/composition-2.webp" type="image/webp">
+                            <img src="img/other/composition-2.jpg" loading="lazy" alt="">
+                        </picture>
+                    </div>
+                    <div class="params">
+                        <div class="control-buttons">
+                            <div class="compare _js-compare" onclick="compare(this);">
+                                <p>Порівняти</p>
+                            </div>
+                            <div class="control-buttons__right">
+                                <div class="share"></div>
+                                <div class="like _js-like" onclick="like(this)"></div>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <p class="name">Інсталяція для унітазу Geberit Duofix 458.126.00.1 Комплект (3в1)</p>
+                            <div class="characteristics">
+                                <p>Хараткристика 1</p>
+                                <p>Хараткристика 2</p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="price"><span>11 234,00</span> грн / шт</div>
+                            <div class="alert _color-green colon">В наявності</div>
+                        </div>
+                    </div>
+                    <div class="calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)"
+                                 onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)"
+                                 ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)"
+                                 onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)"
+                                 ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="goods-slider-wrapper">
+        @@include('_goods-slider.html', {
+        "section_name": "Рекомендовані"
+        })
+    </div>
+
+    <div class="goods-slider-wrapper">
+        @@include('_goods-slider.html', {
+        "section_name": "Переглянуті"
+        })
+    </div>
+
+</div>
+
+@@include('_footer.html')
+
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/other.js"></script>
+</body>
+</html>

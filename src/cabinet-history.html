@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Особистий кабінет - Історія покупок</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cabinet.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+
+<!--Підбір товару - _product-selection-->
+<!--Очікує оплату - _awaiting-payment-->
+<!--Очікує комплектації - _awaiting-completion-->
+<!--Комплектується - _completed-->
+<!--Готове до отримання - _ready-pickup-->
+<!--Регіональне переміщення - _regional-displacement-->
+<!--Внутрішне переміщення - _internal-displacement-->
+<!--Доставка по місту - _delivery-city-->
+<!--Доставка в регіон - _delivery-region-->
+<!--Доставка Новою поштою - _delivery-np-->
+<!--Отримано частково - _partially-received-->
+<!--Отримано повністю - _received-full-->
+
+
+
+<div class="main" id="main">
+    <div class="cabinet">
+        <div class="container">
+            <div class="cabinet-history">
+                <div class="top">
+                    <a href="" class="top-back">Історія покупок</a>
+                    <div class="cabinet-filter">
+                        <p class="total-found">Всього замовлень: <span>8</span></p>
+                        <button type="button" class="sort">Сортування</button>
+                    </div>
+                </div>
+
+                <div class="history-items">
+                    <div class="history-item _js-history-item">
+                        <div class="item-visible">
+                            <div class="info">
+                                <p class="order-number">№ 123456</p>
+                                <p class="order-date">12 травня 2022</p>
+                                <div class="order-status _delivery-np _blue">
+                                    <div class="status-text">Відправлено</div>
+                                </div>
+                            </div>
+                            <div class="images">
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="item-status">
+                                <div class="order-status _delivery-np _blue">
+                                    <p class="status-text">Відправлено</p>
+                                </div>
+                                <p class="price">12 333.00 грн</p>
+                            </div>
+                            <div class="btn-arrow"></div>
+                        </div>
+                        <div class="item-hidden">
+                            <div class="close" onclick="closeHistory(this)"></div>
+                            <div class="scroll-content">
+                                <div class="top">
+                                    <p class="order-num">№12345678</p>
+                                    <ul class="info-list">
+                                        <li>Номер рахунку фактури: <span>123456789</span></li>
+                                        <li>Тип: <span>онлайн</span></li>
+                                        <li>Дата: <span>11.12.23</span></li>
+                                    </ul>
+                                </div>
+                                <div class="card card-status">
+                                    <div class="card-top">
+                                        <p>Статус замовлення</p>
+                                    </div>
+                                    <div class="card-content _js-order-map">
+                                        <div class="order-status__text">
+                                            <p class="_title">Поточний статус замовлення:</p>
+                                            <p>Статус номер один,</p>
+                                            <p>статус номер два (22.02.23)</p>
+                                        </div>
+
+                                        <div class="order-status__map">
+                                            <div class="col">
+                                                <div class="order-status _awaiting-payment _green">
+                                                    <p class="status-text">Очікує оплату (15.08.22)</p>
+                                                </div>
+                                                <div class="order-status _awaiting-completion _green">
+                                                    <p class="status-text">Очікує комплектації (17.08.22)</p>
+                                                </div>
+                                                <div class="order-status _completed _green">
+                                                    <p class="status-text">Комплектується (22.08.22)</p>
+                                                </div>
+                                            </div>
+                                            <div class="_line"></div>
+                                            <div class="col">
+                                                <div class="order-status _ready-pickup _yellow">
+                                                    <p class="status-text">Готове до отримання (23.08.22)</p>
+                                                </div>
+                                                <div class="order-status _regional-displacement _green">
+                                                    <p class="status-text">Регіональне переміщення</p>
+                                                </div>
+                                                <div class="order-status _delivery-np">
+                                                    <p class="status-text">Доставка Новою поштою</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-status__btns">
+                                            <div class="btn _js-show-order-map" onclick="handlerMap(this)" data-text="Закрити">Деталі статусу</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-goods">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Товари у замовленні</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-payment">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Оплата</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Оплата: <span>Готівка</span></li>
+                                            <li>Статус: <span>Оплачено</span></li>
+                                            <li>Сума до сплати: <span>123 000.00 грн</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card card-delivery">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Доставка</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Доставка: <span>Кур’єром Агромат</span></li>
+                                            <li>Адреса: <span>Київ, вул. Алматинська 39, кв 66</span></li>
+                                            <li>Оплата доставки: <span>123.00 грн</span></li>
+                                            <li>Отримувач: <span>Іванов Іван Іванович, +38 (067) 111-11-11</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="btn-default btn-close" onclick="closeHistory(this)">Закрити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-item _js-history-item">
+                        <div class="item-visible">
+                            <div class="info">
+                                <p class="order-number">№ 123456</p>
+                                <p class="order-date">12 травня 2022</p>
+                                <div class="order-status _delivery-np _blue">
+                                    <div class="status-text">Відправлено</div>
+                                </div>
+                            </div>
+                            <div class="images">
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="item-status">
+                                <div class="order-status _delivery-np _blue">
+                                    <p class="status-text">Відправлено</p>
+                                </div>
+                                <p class="price">12 333.00 грн</p>
+                            </div>
+                            <div class="btn-arrow"></div>
+                        </div>
+                        <div class="item-hidden">
+                            <div class="close" onclick="closeHistory(this)"></div>
+                            <div class="scroll-content">
+                                <div class="top">
+                                    <p class="order-num">№12345678</p>
+                                    <ul class="info-list">
+                                        <li>Номер рахунку фактури: <span>123456789</span></li>
+                                        <li>Тип: <span>онлайн</span></li>
+                                        <li>Дата: <span>11.12.23</span></li>
+                                    </ul>
+                                </div>
+                                <div class="card card-status">
+                                    <div class="card-top">
+                                        <p>Статус замовлення</p>
+                                    </div>
+                                    <div class="card-content _js-order-map">
+                                        <div class="order-status__text">
+                                            <p class="_title">Поточний статус замовлення:</p>
+                                            <p>Статус номер один,</p>
+                                            <p>статус номер два (22.02.23)</p>
+                                        </div>
+
+                                        <div class="order-status__map">
+                                            <div class="col">
+                                                <div class="order-status _awaiting-payment _green">
+                                                    <p class="status-text">Очікує оплату (15.08.22)</p>
+                                                </div>
+                                                <div class="order-status _awaiting-completion _green">
+                                                    <p class="status-text">Очікує комплектації (17.08.22)</p>
+                                                </div>
+                                                <div class="order-status _completed _green">
+                                                    <p class="status-text">Комплектується (22.08.22)</p>
+                                                </div>
+                                            </div>
+                                            <div class="_line"></div>
+                                            <div class="col">
+                                                <div class="order-status _ready-pickup _yellow">
+                                                    <p class="status-text">Готове до отримання (23.08.22)</p>
+                                                </div>
+                                                <div class="order-status _regional-displacement _green">
+                                                    <p class="status-text">Регіональне переміщення</p>
+                                                </div>
+                                                <div class="order-status _delivery-np">
+                                                    <p class="status-text">Доставка Новою поштою</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-status__btns">
+                                            <div class="btn _js-show-order-map" onclick="handlerMap(this)" data-text="Закрити">Деталі статусу</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-goods">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Товари у замовленні</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-payment">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Оплата</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Оплата: <span>Готівка</span></li>
+                                            <li>Статус: <span>Оплачено</span></li>
+                                            <li>Сума до сплати: <span>123 000.00 грн</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card card-delivery">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Доставка</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Доставка: <span>Кур’єром Агромат</span></li>
+                                            <li>Адреса: <span>Київ, вул. Алматинська 39, кв 66</span></li>
+                                            <li>Оплата доставки: <span>123.00 грн</span></li>
+                                            <li>Отримувач: <span>Іванов Іван Іванович, +38 (067) 111-11-11</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="btn-default btn-close" onclick="closeHistory(this)">Закрити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-item _js-history-item">
+                        <div class="item-visible">
+                            <div class="info">
+                                <p class="order-number">№ 123456</p>
+                                <p class="order-date">12 травня 2022</p>
+                                <div class="order-status _delivery-np _blue">
+                                    <div class="status-text">Відправлено</div>
+                                </div>
+                            </div>
+                            <div class="images">
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="item-status">
+                                <div class="order-status _delivery-np _blue">
+                                    <p class="status-text">Відправлено</p>
+                                </div>
+                                <p class="price">12 333.00 грн</p>
+                            </div>
+                            <div class="btn-arrow"></div>
+                        </div>
+                        <div class="item-hidden">
+                            <div class="close" onclick="closeHistory(this)"></div>
+                            <div class="scroll-content">
+                                <div class="top">
+                                    <p class="order-num">№12345678</p>
+                                    <ul class="info-list">
+                                        <li>Номер рахунку фактури: <span>123456789</span></li>
+                                        <li>Тип: <span>онлайн</span></li>
+                                        <li>Дата: <span>11.12.23</span></li>
+                                    </ul>
+                                </div>
+                                <div class="card card-status">
+                                    <div class="card-top">
+                                        <p>Статус замовлення</p>
+                                    </div>
+                                    <div class="card-content _js-order-map">
+                                        <div class="order-status__text">
+                                            <p class="_title">Поточний статус замовлення:</p>
+                                            <p>Статус номер один,</p>
+                                            <p>статус номер два (22.02.23)</p>
+                                        </div>
+
+                                        <div class="order-status__map">
+                                            <div class="col">
+                                                <div class="order-status _awaiting-payment _green">
+                                                    <p class="status-text">Очікує оплату (15.08.22)</p>
+                                                </div>
+                                                <div class="order-status _awaiting-completion _green">
+                                                    <p class="status-text">Очікує комплектації (17.08.22)</p>
+                                                </div>
+                                                <div class="order-status _completed _green">
+                                                    <p class="status-text">Комплектується (22.08.22)</p>
+                                                </div>
+                                            </div>
+                                            <div class="_line"></div>
+                                            <div class="col">
+                                                <div class="order-status _ready-pickup _yellow">
+                                                    <p class="status-text">Готове до отримання (23.08.22)</p>
+                                                </div>
+                                                <div class="order-status _regional-displacement _green">
+                                                    <p class="status-text">Регіональне переміщення</p>
+                                                </div>
+                                                <div class="order-status _delivery-np">
+                                                    <p class="status-text">Доставка Новою поштою</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-status__btns">
+                                            <div class="btn _js-show-order-map" onclick="handlerMap(this)" data-text="Закрити">Деталі статусу</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-goods">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Товари у замовленні</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-payment">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Оплата</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Оплата: <span>Готівка</span></li>
+                                            <li>Статус: <span>Оплачено</span></li>
+                                            <li>Сума до сплати: <span>123 000.00 грн</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card card-delivery">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Доставка</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Доставка: <span>Кур’єром Агромат</span></li>
+                                            <li>Адреса: <span>Київ, вул. Алматинська 39, кв 66</span></li>
+                                            <li>Оплата доставки: <span>123.00 грн</span></li>
+                                            <li>Отримувач: <span>Іванов Іван Іванович, +38 (067) 111-11-11</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="btn-default btn-close" onclick="closeHistory(this)">Закрити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-item _js-history-item">
+                        <div class="item-visible">
+                            <div class="info">
+                                <p class="order-number">№ 123456</p>
+                                <p class="order-date">12 травня 2022</p>
+                                <div class="order-status _delivery-np _blue">
+                                    <div class="status-text">Відправлено</div>
+                                </div>
+                            </div>
+                            <div class="images">
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/1.webp" type="image/webp">
+                                        <img src="img/prod/1.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                                <div class="img">
+                                    <picture>
+                                        <source srcset="img/prod/2.webp" type="image/webp">
+                                        <img src="img/prod/2.jpg" loading="lazy" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="item-status">
+                                <div class="order-status _delivery-np _blue">
+                                    <p class="status-text">Відправлено</p>
+                                </div>
+                                <p class="price">12 333.00 грн</p>
+                            </div>
+                            <div class="btn-arrow"></div>
+                        </div>
+                        <div class="item-hidden">
+                            <div class="close" onclick="closeHistory(this)"></div>
+                            <div class="scroll-content">
+                                <div class="top">
+                                    <p class="order-num">№12345678</p>
+                                    <ul class="info-list">
+                                        <li>Номер рахунку фактури: <span>123456789</span></li>
+                                        <li>Тип: <span>онлайн</span></li>
+                                        <li>Дата: <span>11.12.23</span></li>
+                                    </ul>
+                                </div>
+                                <div class="card card-status">
+                                    <div class="card-top">
+                                        <p>Статус замовлення</p>
+                                    </div>
+                                    <div class="card-content _js-order-map">
+                                        <div class="order-status__text">
+                                            <p class="_title">Поточний статус замовлення:</p>
+                                            <p>Статус номер один,</p>
+                                            <p>статус номер два (22.02.23)</p>
+                                        </div>
+
+                                        <div class="order-status__map">
+                                            <div class="col">
+                                                <div class="order-status _awaiting-payment _green">
+                                                    <p class="status-text">Очікує оплату (15.08.22)</p>
+                                                </div>
+                                                <div class="order-status _awaiting-completion _green">
+                                                    <p class="status-text">Очікує комплектації (17.08.22)</p>
+                                                </div>
+                                                <div class="order-status _completed _green">
+                                                    <p class="status-text">Комплектується (22.08.22)</p>
+                                                </div>
+                                            </div>
+                                            <div class="_line"></div>
+                                            <div class="col">
+                                                <div class="order-status _ready-pickup _yellow">
+                                                    <p class="status-text">Готове до отримання (23.08.22)</p>
+                                                </div>
+                                                <div class="order-status _regional-displacement _green">
+                                                    <p class="status-text">Регіональне переміщення</p>
+                                                </div>
+                                                <div class="order-status _delivery-np">
+                                                    <p class="status-text">Доставка Новою поштою</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-status__btns">
+                                            <div class="btn _js-show-order-map" onclick="handlerMap(this)" data-text="Закрити">Деталі статусу</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-goods">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Товари у замовленні</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-info">
+                                                <div class="img">
+                                                    <picture>
+                                                        <source srcset="img/prod/0.webp" type="image/webp">
+                                                        <img src="img/prod/0.jpg" loading="lazy" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="labels">
+                                                    <p class="article">Ар. 12345678</p>
+                                                    <a href="" class="name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                                                    <div class="old-price_wrap">
+                                                        <span class="discount">-50%</span>
+                                                        <span class="old-price">1234.33</span>
+                                                    </div>
+                                                    <div class="price _color-red"><span>1 234.00</span> грн / шт</div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-price">
+                                                <p>
+                                                    Кількість:
+                                                    <span>22<small> шт</small></span>
+                                                </p>
+                                                <p>
+                                                    Вартість:
+                                                    <span><strong>3 000.00</strong><small> грн</small></span>
+                                                </p>
+                                            </div>
+                                            <a href="" class="btn-border">
+                                                Залишити відгк
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-payment">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Оплата</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Оплата: <span>Готівка</span></li>
+                                            <li>Статус: <span>Оплачено</span></li>
+                                            <li>Сума до сплати: <span>123 000.00 грн</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card card-delivery">
+                                    <div class="card-top _js-show-history-card">
+                                        <p>Доставка</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li>Доставка: <span>Кур’єром Агромат</span></li>
+                                            <li>Адреса: <span>Київ, вул. Алматинська 39, кв 66</span></li>
+                                            <li>Оплата доставки: <span>123.00 грн</span></li>
+                                            <li>Отримувач: <span>Іванов Іван Іванович, +38 (067) 111-11-11</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="btn-default btn-close" onclick="closeHistory(this)">Закрити замовлення</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination _mb">
+                    <div class="btn-more">
+                        <span>Завантажити більше</span>
+                    </div>
+                    <div class="pagin-content">
+                        <a class="pagin-elem pagin-arrow _prev" href="">Назад</a>
+
+                        <a href="" class="pagin-elem pagin-page current">1</a>
+                        <a href="" class="pagin-elem pagin-page">2</a>
+                        <p class="pagin-elem pagin-dots">...</p>
+                        <a href="" class="pagin-elem pagin-page">7</a>
+                        <a href="" class="pagin-elem pagin-page">8</a>
+
+                        <a class="pagin-elem pagin-arrow _next" href="">Вперед</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@@include('_footer.html')
+
+<script src="cdn/js/maskinput.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cabinet.js"></script>
+</body>
+</html>

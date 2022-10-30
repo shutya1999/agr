@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Особистий кабінет - Реєстрація</title>
+
+
+    <link rel="stylesheet" href="cdn/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cabinet.css">
+
+</head>
+<body>
+@@include('_header.html')
+
+<div class="main" id="main">
+    <div class="cabinet">
+        <div class="container">
+            <div class="cabinet-edit">
+                <div class="top">
+                    <a href="" class="top-back">Профіль</a>
+                </div>
+                <div class="form-edit">
+                    <form action="" class="item">
+                        <div class="item-top">
+                            <p class="top-title">Персональні дані</p>
+                            <p class="edit">Редагувати</p>
+                        </div>
+                        <div class="form-group">
+                            <input id="user-name" type="text" name="user-name" class="form-control">
+                            <label for="user-name">Ім’я</label>
+                            <div class="help-block">Error</div>
+                        </div>
+                        <div class="form-group">
+                            <input id="user-surname" type="text" name="user-surname" class="form-control">
+                            <label for="user-surname">Прізвище</label>
+                            <div class="help-block">Error</div>
+                        </div>
+                        <div class="form-group">
+                            <input id="user-secname" type="text" name="user-secname" class="form-control">
+                            <label for="user-secname">Побатькові</label>
+                            <div class="help-block">Error</div>
+                        </div>
+                        <button type="submit" class="btn-default">Зберегти</button>
+                    </form>
+                    <form action="" class="item">
+                        <div class="item-top">
+                            <p class="top-title">Контактна ірформація</p>
+                            <p class="edit">Редагувати</p>
+                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <input id="user-phone" type="text" name="user-phone" class="form-control">-->
+<!--                            <label for="user-phone">Номер телефону</label>-->
+<!--                            <div class="help-block">Error</div>-->
+<!--                        </div>-->
+                        <div class="form-group">
+                            <input id="user-email" type="text" name="user-email" class="form-control">
+                            <label for="user-email">Електронна адреса</label>
+                            <div class="help-block">Error</div>
+                        </div>
+                        <button type="submit" class="btn-default">Зберегти</button>
+                    </form>
+                    <form action="" class="item">
+                        <div class="item-top">
+                            <p class="top-title">Доставка</p>
+                            <p class="edit">Редагувати</p>
+                        </div>
+                        <div class="select-wrapper">
+                            <div class="select" id="select-city"></div>
+                        </div>
+                        <div class="form-group">
+                            <input id="user-address" type="text" name="user-address" class="form-control">
+                            <label for="user-address">Адреса</label>
+                            <div class="help-block">Error</div>
+                        </div>
+                        <div class="address-col">
+                            <div class="form-group">
+                                <input id="user-house-number" type="text" name="user-house-number" class="form-control">
+                                <label for="user-house-number">Дім</label>
+                                <div class="help-block">Error</div>
+                            </div>
+                            <div class="form-group">
+                                <input id="user-corpus" type="text" name="user-corpus" class="form-control">
+                                <label for="user-corpus">Корпус</label>
+                                <div class="help-block">Error</div>
+                            </div>
+                            <div class="form-group">
+                                <input id="user-apartment" type="text" name="user-apartment" class="form-control">
+                                <label for="user-apartment">Квартира</label>
+                                <div class="help-block">Error</div>
+                            </div>
+                            <div class="form-group">
+                                <input id="user-floor" type="text" name="user-floor" class="form-control">
+                                <label for="user-floor">Поверх</label>
+                                <div class="help-block">Error</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-default">Зберегти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('_footer.html')
+
+<script src="cdn/js/maskinput.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="cdn/js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cabinet.js"></script>
+</body>
+</html>

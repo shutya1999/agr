@@ -1,0 +1,378 @@
+<div class="popup popup-cart">
+<!--    <div class="close-popup js-close-popup"></div>-->
+<!--    <div class="popup-title">Залиште свій відгук</div>-->
+    <div class="popup-cart__top">
+        <div class="fixed-mob">
+            <img src="img/components/logo.svg" alt="">
+            <div class="close-popup js-close-popup"></div>
+        </div>
+        <div class="popup-title">
+            Кошик
+            <div class="close-popup js-close-popup"></div>
+        </div>
+        <div class="total-goods">Ви обрали <span>4</span> товарів</div>
+    </div>
+    <div class="popup-cart__main">
+        <div class="popup-cart__items">
+            <div class="item">
+                <div class="item-top">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                            <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                        </picture>
+                        <div class="goods-label discount">
+                            <span>Акція</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                            <div class="btn-delete"></div>
+                        </div>
+                        <div class="old-price_wrap">
+                            <span class="discount">-5%</span>
+                            <span class="old-price">1234.33</span>
+                        </div>
+                        <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                    </div>
+                </div>
+                <div class="item-bottom">
+                    <div class="item-cost__total">
+                        <p>Всього: <span>233 234,00</span> грн</p>
+                        <div class="btn-delete"></div>
+                    </div>
+                    <div class="cart-calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                            <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                        </picture>
+                        <div class="goods-label discount">
+                            <span>Акція</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                            <div class="btn-delete"></div>
+                        </div>
+                        <div class="old-price_wrap">
+                            <span class="discount">-5%</span>
+                            <span class="old-price">1234.33</span>
+                        </div>
+                        <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                    </div>
+                </div>
+                <div class="item-bottom">
+                    <div class="item-cost__total">
+                        <p>Всього: <span>233 234,00</span> грн</p>
+                        <div class="btn-delete"></div>
+                    </div>
+                    <div class="cart-calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                            <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                        </picture>
+                        <div class="goods-label discount">
+                            <span>Акція</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                            <div class="btn-delete"></div>
+                        </div>
+                        <div class="old-price_wrap">
+                            <span class="discount">-5%</span>
+                            <span class="old-price">1234.33</span>
+                        </div>
+                        <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                    </div>
+                </div>
+                <div class="item-bottom">
+                    <div class="item-cost__total">
+                        <p>Всього: <span>233 234,00</span> грн</p>
+                        <div class="btn-delete"></div>
+                    </div>
+                    <div class="cart-calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="img">
+                        <picture>
+                            <source srcset="img/catalog/popular-filter.webp" type="image/webp">
+                            <img src="img/catalog/popular-filter.jpg" loading="lazy" alt="">
+                        </picture>
+                        <div class="goods-label discount">
+                            <span>Акція</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <a href="" class="prod-name">Керамограніт ITT Ceramic Napoli Pearl Matt Rect</a>
+                            <div class="btn-delete"></div>
+                        </div>
+                        <div class="old-price_wrap">
+                            <span class="discount">-5%</span>
+                            <span class="old-price">1234.33</span>
+                        </div>
+                        <div class="price _color-red"><span>1 172.30</span> грн / шт</div>
+                    </div>
+                </div>
+                <div class="item-bottom">
+                    <div class="item-cost__total">
+                        <p>Всього: <span>233 234,00</span> грн</p>
+                        <div class="btn-delete"></div>
+                    </div>
+                    <div class="cart-calc">
+                        <div class="counter js-counter">
+                            <div class="btn-count btn-decrement" onmousedown="countHold(this, 0, event)" onmouseup="countPres(this, 0, event)" ontouchstart="countHold(this, 0, event)" ontouchend="countPres(this, 0, event)"></div>
+                            <input type="text" value="1" onchange="counterOnChange(this)">
+                            <div class="btn-count btn-increment" onmousedown="countHold(this, 1, event)" onmouseup="countPres(this, 1, event)" ontouchstart="countHold(this, 1, event)" ontouchend="countPres(this, 1, event)"></div>
+                        </div>
+                        <div class="measurement js-measurement">
+                            <div class="measurement-select" onclick="selectMeasurement(this);">м<sup>2</sup></div>
+                            <ul class="measurement-list">
+                                <li data-measurement="1">шт</li>
+                                <li data-measurement="2">пал</li>
+                                <li class="_selected" data-measurement="3">м<sup>2</sup></li>
+                            </ul>
+                        </div>
+                        <p class="measurement-text">Площа: 2.25 м<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-cart__cost">
+            <div class="bottom-title">Загальна сумма замовлення</div>
+            <div class="price-list">
+                <div class="list-item">
+                    <p>Варітсть замовлення:</p>
+                    <p><span>6 000.00</span> грн</p>
+                </div>
+                <div class="list-item">
+                    <p>Знижка: </p>
+                    <p><span>1 000.00</span> грн</p>
+                </div>
+                <div class="list-item">
+                    <p>До сплати: </p>
+                    <p><strong><span>5 000.00</span></strong> грн</p>
+                </div>
+            </div>
+            <div class="btn-default">Оформити замовлення</div>
+            <div class="btn-border">продовжити покупки</div>
+        </div>
+    </div>
+    <div class="popup-cart__bottom">
+        @@include('_goods-slider.html', {
+        "section_name": "Супутні товари"
+        })
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="top">
+            <div class="img">
+                <img src="img/components/logo.svg" alt="Агромат">
+            </div>
+            <div class="follow">
+                <input type="text" name="follow" placeholder="Введіть вашу електронну адресу">
+                <button>Підписка</button>
+            </div>
+        </div>
+        <div class="menu-footer">
+            <div class="col">
+                <p class="f-title">Часи роботи</p>
+                <p>
+                    Пн-Пт: 09.00 - 20.00 <br>
+                    Сб: 10.00 - 20.00 <br>
+                    Нд: 10.00 - 18.00 <br>
+                </p>
+                <p>
+                    <a href="tel:0 800 30 30 19">0 800 30 30 19</a>
+                </p>
+                <p>
+                    <a href="mailto:shop@agromat.ua">shop@agromat.ua</a>
+                </p>
+            </div>
+            <div class="col">
+                <p class="f-title">Агромат</p>
+                <a href="">Новини</a>
+                <a href="">Робота в Агромат</a>
+                <a href="">Блог</a>
+                <a href="">Фінансова звітність</a>
+                <a href="">Контакти</a>
+                <a href="">Про компанію</a>
+            </div>
+
+            <div class="col">
+                <p class="f-title">Покупцям</p>
+                <a href="">Католог товарів</a>
+                <a href="">Акції</a>
+                <a href="">Умови доставки</a>
+                <a href="">Оплата</a>
+                <a href="">Обмін і повернення товару</a>
+                <a href="">Гарантія</a>
+                <a href="">Правила користування сайтом</a>
+            </div>
+
+            <div class="col">
+                <p class="f-title">Партнерам</p>
+                <a href="">Архітекторам (КАДА)</a>
+                <a href="">Комплектація об’єктів</a>
+                <a href="">Оптові продажі</a>
+                <a href="">Експорт</a>
+                <a href="">ДП “Шпат”</a>
+            </div>
+            <div class="col">
+                <p class="f-title">Сервіс</p>
+                <a href="">Сервісний центр</a>
+                <a href="">Порізка плитки</a>
+                <a href="">3D-візуалізація</a>
+                <a href="">Доставка за кордон</a>
+            </div>
+        </div>
+        <div class="social-networks">
+            <p class="f-title">Підписуйтеся на Агромат</p>
+            <div class="sn-wrap">
+                <a href="" class="_fb">Facebook</a>
+                <a href="" class="_ig">Instagram</a>
+                <a href="" class="_yt">YouTube</a>
+                <a href="" class="_pr">Pinterest</a>
+                <a href="" class="_tg">Telegram</a>
+            </div>
+            <div class="f-payments">
+                <img src="img/components/f-payments.svg" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <p>© shop.agromat.ua, 2007–2020, Інтернет-магазин компанії «АГРОМАТ»</p>
+            <a href="">Політика конфіденційності</a>
+            <a href="https://uaitlab.com/" class="uaitlab">
+                Створено
+                <svg width="65" height="14" viewBox="0 0 65 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1516_56426)">
+                        <path d="M26.3121 13.4993H23.9502C23.8681 13.4993 23.7893 13.467 23.7313 13.4095C23.6732 13.352 23.6406 13.2741 23.6406 13.1928V4.02748C23.6404 3.97357 23.6546 3.92055 23.6816 3.87379C23.7087 3.82702 23.7478 3.78815 23.7949 3.7611C23.842 3.73405 23.8954 3.71978 23.9499 3.71973C24.0043 3.71967 24.0578 3.73384 24.105 3.7608L26.4669 5.1126C26.5141 5.13961 26.5533 5.17849 26.5805 5.22533C26.6076 5.27216 26.6218 5.32527 26.6216 5.37928V13.1928C26.6216 13.2741 26.589 13.352 26.531 13.4095C26.4729 13.467 26.3942 13.4993 26.3121 13.4993Z" fill="white"/>
+                        <path d="M24.9689 0.500015H27.3308C27.4129 0.500015 27.4916 0.53231 27.5497 0.589796C27.6077 0.647282 27.6403 0.72525 27.6403 0.806547V9.97184C27.6409 10.0262 27.6268 10.0797 27.5996 10.1269C27.5723 10.1741 27.5329 10.2133 27.4853 10.2405C27.4378 10.2676 27.3838 10.2817 27.3289 10.2814C27.274 10.281 27.2201 10.2662 27.1729 10.2385L24.811 8.88978C24.7638 8.86277 24.7246 8.82389 24.6974 8.77706C24.6702 8.73022 24.656 8.67711 24.6563 8.6231V0.806547C24.6563 0.766033 24.6644 0.725922 24.6801 0.68853C24.6959 0.651139 24.7189 0.61721 24.748 0.588705C24.7771 0.560201 24.8116 0.537686 24.8495 0.522463C24.8874 0.50724 24.928 0.49961 24.9689 0.500015Z" fill="#F58634"/>
+                        <path d="M26.4649 5.11309L24.6602 4.08008V8.62287C24.6599 8.67689 24.6741 8.73 24.7013 8.77683C24.7285 8.82366 24.7677 8.86255 24.8149 8.88956L26.6227 9.92257V5.37977C26.6226 5.32545 26.608 5.27214 26.5802 5.22528C26.5525 5.17842 26.5127 5.1397 26.4649 5.11309Z" fill="#B93A38"/>
+                        <path d="M2.47649 13.5002C2.15083 13.5053 1.82763 13.4437 1.52717 13.3192C1.22672 13.1947 0.955519 13.01 0.730604 12.7768C0.497514 12.5541 0.31256 12.2868 0.186976 11.9912C0.0613926 11.6956 -0.00220092 11.3778 5.81421e-05 11.0571V4.02528C5.81421e-05 3.94398 0.0326715 3.86602 0.090724 3.80853C0.148777 3.75104 0.227513 3.71875 0.309612 3.71875H2.30004C2.38214 3.71875 2.46088 3.75104 2.51893 3.80853C2.57698 3.86602 2.60959 3.94398 2.60959 4.02528V10.6157C2.60959 10.697 2.64221 10.775 2.70026 10.8325C2.75831 10.8899 2.83705 10.9222 2.91915 10.9222H7.10121C7.18331 10.9222 7.26205 10.8899 7.3201 10.8325C7.37815 10.775 7.41077 10.697 7.41077 10.6157V4.03448C7.41077 3.95318 7.44338 3.87521 7.50143 3.81773C7.55949 3.76024 7.63822 3.72795 7.72032 3.72795H9.70146C9.74211 3.72795 9.78237 3.73587 9.81992 3.75128C9.85748 3.76668 9.8916 3.78926 9.92035 3.81773C9.94909 3.84619 9.9719 3.87998 9.98745 3.91717C10.003 3.95436 10.011 3.99422 10.011 4.03448V11.0571C10.0141 11.3774 9.95146 11.6949 9.82695 11.9905C9.70244 12.2861 9.51863 12.5536 9.28666 12.7768C9.06175 13.01 8.79054 13.1947 8.49009 13.3192C8.18964 13.4437 7.86643 13.5053 7.54078 13.5002H2.47649Z" fill="white"/>
+                        <path d="M14.2866 13.5002C13.9614 13.5056 13.6386 13.4441 13.3386 13.3196C13.0386 13.1951 12.768 13.0102 12.5439 12.7768C12.3119 12.5536 12.1281 12.2861 12.0036 11.9905C11.8791 11.6949 11.8164 11.3774 11.8195 11.0571V7.62703C11.8195 7.54573 11.8521 7.46776 11.9102 7.41028C11.9682 7.35279 12.047 7.3205 12.1291 7.3205H19.2147V6.60628C19.2147 6.52498 19.1821 6.44701 19.1241 6.38953C19.066 6.33204 18.9873 6.29974 18.9052 6.29974H12.126C12.0439 6.29974 11.9651 6.26745 11.9071 6.20996C11.849 6.15248 11.8164 6.07451 11.8164 5.99321V4.02528C11.8164 3.94398 11.849 3.86602 11.9071 3.80853C11.9651 3.75104 12.0439 3.71875 12.126 3.71875H19.3633C20.0201 3.71875 20.65 3.97711 21.1144 4.437C21.5788 4.89688 21.8397 5.52062 21.8397 6.171V13.1967C21.8397 13.278 21.8071 13.356 21.7491 13.4135C21.691 13.4709 21.6123 13.5032 21.5302 13.5032L14.2866 13.5002ZM18.9299 10.9222C19.012 10.9222 19.0908 10.8899 19.1488 10.8325C19.2069 10.775 19.2395 10.697 19.2395 10.6157V9.5827H14.7448C14.6627 9.5827 14.5839 9.61499 14.5259 9.67248C14.4678 9.72996 14.4352 9.80793 14.4352 9.88923V10.6157C14.4352 10.697 14.4678 10.775 14.5259 10.8325C14.5839 10.8899 14.6627 10.9222 14.7448 10.9222H18.9299Z" fill="white"/>
+                        <path d="M31.9335 13.5C31.2782 13.4952 30.6511 13.2353 30.1877 12.7764C29.7244 12.3176 29.4619 11.6966 29.457 11.0477V0.806531C29.457 0.725234 29.4896 0.647267 29.5477 0.589781C29.6057 0.532295 29.6845 0.5 29.7666 0.5H31.7539C31.836 0.5 31.9148 0.532295 31.9728 0.589781C32.0309 0.647267 32.0635 0.725234 32.0635 0.806531V3.71245H35.4128C35.4949 3.71245 35.5737 3.74474 35.6317 3.80223C35.6898 3.85972 35.7224 3.93768 35.7224 4.01898V5.99304C35.7224 6.07434 35.6898 6.15231 35.6317 6.20979C35.5737 6.26728 35.4949 6.29958 35.4128 6.29958H32.0604V10.6155C32.0604 10.6968 32.093 10.7748 32.151 10.8323C32.2091 10.8898 32.2878 10.9221 32.3699 10.9221H35.4128C35.4949 10.9221 35.5737 10.9544 35.6317 11.0119C35.6898 11.0693 35.7224 11.1473 35.7224 11.2286V13.1965C35.7224 13.2778 35.6898 13.3558 35.6317 13.4133C35.5737 13.4708 35.4949 13.5031 35.4128 13.5031L31.9335 13.5Z" fill="white"/>
+                        <path d="M39.5624 13.5C38.9071 13.4952 38.28 13.2353 37.8166 12.7764C37.3533 12.3176 37.0908 11.6966 37.0859 11.0477V0.806531C37.0859 0.725234 37.1186 0.647267 37.1766 0.589781C37.2347 0.532295 37.3134 0.5 37.3955 0.5H39.4045C39.4866 0.5 39.5653 0.532295 39.6234 0.589781C39.6814 0.647267 39.7141 0.725234 39.7141 0.806531V10.6155C39.7141 10.6968 39.7467 10.7748 39.8047 10.8323C39.8628 10.8898 39.9415 10.9221 40.0236 10.9221H41.4073C41.4894 10.9221 41.5682 10.9544 41.6262 11.0119C41.6843 11.0693 41.7169 11.1473 41.7169 11.2286V13.2057C41.7169 13.287 41.6843 13.365 41.6262 13.4225C41.5682 13.48 41.4894 13.5123 41.4073 13.5123L39.5624 13.5Z" fill="white"/>
+                        <path d="M45.1737 13.4991C44.848 13.5042 44.5248 13.4426 44.2244 13.3181C43.9239 13.1936 43.6527 13.0089 43.4278 12.7756C43.1986 12.5512 43.0177 12.2831 42.8959 11.9876C42.7741 11.692 42.7139 11.3752 42.7189 11.056V7.61672C42.7189 7.53542 42.7515 7.45745 42.8096 7.39997C42.8677 7.34248 42.9464 7.31019 43.0285 7.31019H50.1265V6.6021C50.1265 6.5208 50.0939 6.44284 50.0359 6.38535C49.9778 6.32786 49.8991 6.29557 49.817 6.29557H43.0068C42.9247 6.29557 42.846 6.26327 42.7879 6.20579C42.7299 6.1483 42.6973 6.07033 42.6973 5.98904V4.02723C42.6973 3.94594 42.7299 3.86797 42.7879 3.81049C42.846 3.753 42.9247 3.7207 43.0068 3.7207H50.2442C50.901 3.7207 51.5309 3.97907 51.9953 4.43895C52.4597 4.89884 52.7206 5.52258 52.7206 6.17296V13.2232C52.7206 13.3045 52.688 13.3824 52.6299 13.4399C52.5719 13.4974 52.4931 13.5297 52.411 13.5297L45.1737 13.4991ZM49.817 10.9211C49.8991 10.9211 49.9778 10.8888 50.0359 10.8313C50.0939 10.7739 50.1265 10.6959 50.1265 10.6146V9.57239H45.6194C45.5373 9.57239 45.4586 9.60469 45.4006 9.66217C45.3425 9.71966 45.3099 9.79762 45.3099 9.87892V10.6146C45.3099 10.6959 45.3425 10.7739 45.4006 10.8313C45.4586 10.8888 45.5373 10.9211 45.6194 10.9211H49.817Z" fill="white"/>
+                        <path d="M54.5215 13.1965V0.806531C54.5215 0.725234 54.5541 0.647267 54.6122 0.589781C54.6702 0.532295 54.749 0.5 54.8311 0.5H56.8246C56.9067 0.5 56.9854 0.532295 57.0435 0.589781C57.1015 0.647267 57.1341 0.725234 57.1341 0.806531V3.70632H62.0653C62.7221 3.70632 63.352 3.96468 63.8164 4.42457C64.2808 4.88445 64.5418 5.50819 64.5418 6.15857V11.0631C64.5448 11.3833 64.4822 11.7009 64.3577 11.9965C64.2332 12.2921 64.0494 12.5595 63.8174 12.7827C63.5925 13.016 63.3213 13.2007 63.0208 13.3252C62.7204 13.4497 62.3972 13.5113 62.0715 13.5061H54.8311C54.7901 13.5061 54.7496 13.4981 54.7119 13.4825C54.6741 13.4669 54.6398 13.4441 54.6111 13.4153C54.5823 13.3865 54.5595 13.3523 54.5442 13.3148C54.5288 13.2772 54.5211 13.237 54.5215 13.1965ZM61.6412 10.9221C61.7233 10.9221 61.8021 10.8898 61.8601 10.8323C61.9182 10.7748 61.9508 10.6968 61.9508 10.6155V6.60917C61.9508 6.52788 61.9182 6.44991 61.8601 6.39242C61.8021 6.33494 61.7233 6.30264 61.6412 6.30264H57.1279V10.6155C57.1279 10.6968 57.1606 10.7748 57.2186 10.8323C57.2767 10.8898 57.3554 10.9221 57.4375 10.9221H61.6412Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1516_56426">
+                            <rect width="64.5357" height="13" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <div class="f-payments">
+                <img src="img/components/f-payments.svg" alt="">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup alert alert-success">
+    <div class="alert-icon"></div>
+    <div class="close-popup js-close-popup"></div>
+    <div class="popup-title">Дякуємо!</div>
+    <p class="alert-desc">
+        Ваш коментар буде опублікований після перевірки модератора.
+    </p>
+</div>
+
+<div class="popup alert alert-error">
+    <div class="alert-icon"></div>
+    <div class="close-popup js-close-popup"></div>
+    <div class="popup-title">Помилка!</div>
+    <p class="alert-desc">
+        Виникла помилка, спробуйте пізніше!
+    </p>
+</div>
+
+<div class="popup popup-callback">
+    <div class="close-popup js-close-popup"></div>
+    <div class="popup-icon"></div>
+    <div class="popup-title">Зворотній дзвінок</div>
+    <p class="popup-desc">
+        Хочете, щоб ми вам передзвонили?Будь ласка, залиште Ваш номер телефону. В робочий час ми телефонуємо протягом 3 хвилин”
+    </p>
+    <form action="" class="form-review">
+        <div class="form-group">
+            <input id="user_name" class="form-control" type="text">
+            <label for="user_name">Ім’я*</label>
+            <div class="help-block">Помилка</div>
+        </div>
+        <div class="form-group">
+            <input id="user_phone" class="form-control" type="text">
+            <label for="user_phone">Телефон</label>
+            <div class="help-block">Помилка</div>
+        </div>
+
+        <button class="btn-default">Чекаю дзвінка</button>
+
+    </form>
+</div>
+
+<div class="fixed-callback"><span></span></div>
+<div class="btn-scroll-top"></div>
